@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+This is an example weekly progress report document that team members can use to report their individual progress 
+of their ECE477 senior design projects. Weekly progress reports are expected to follow the general guidelines
+presented in the "Progress Report Policy" document, posted on Brightspace.  
+
+Please create 4 copies of this example, renaming each copy to <PurdueID>.html, where <PurdueID> corresponds to
+the Purdue ITAP Career Account ID given by Purdue to each individual team member. If you have any questions,
+contact course staff.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--Reconfigurable base tag; used to modify the site root location for root-relative links-->
+<!--<base href="https://engineering.purdue.edu/ece477/StudentWebTemplate/" />-->
+    <base href="https://engineering.purdue.edu/477grp3/" /> <!-- Replace the N with your team number-->
+
+<!--Content-->
+<title>ECE477 Course Documents</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="George Hadley">
+<meta name = "format-detection" content = "telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!--CSS-->
+<link rel="stylesheet" href="css/default.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/content.css">
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+</head>
+<body>
+<div id="wrapper_site">
+    <div id="wrapper_page">
+	<!-- Instantiate global site header.-->
+	<div id="header"></div>
+		<!-- Instantiate site global navigation bar.-->
+		<div id="menu"></div>
+	
+		<!-- Instantiate a page banner image. Page banner images should be 1100x350px and should be located within the local
+			img folder located at this directory level. -->
+		<div id="banner">
+			<img src="Files/img/BannerImgExample.jpg"></img>
+		</div>
+	
+		<!-- Instantiate "tools" needed for a page. Tools are premade functional blocks that can be used to build a page,
+			and include things such as a file lister (for listing out homework assignments or tutorials)
+		-->
+		<div id="content">
+            <h2>Progress Report for Dan Gue</h2>
+
+            <h4>Week 14:</h4>
+            <b>Date:</b> 4/21/2023 <br>
+            <b>Total hours:25 <br>           
+            <b>Description of project design efforts:</b><br>
+            <b>Integration</b><br>
+            <b>The main thing that I focused on this week was to integrate our entire project together. For my focus in particular that was ensuring that the hardware would work well together. Our project had a lot of moving peices so it was essential that everything was coordianed with other parts. One of the things I had to work on was making sure that our card system worked corectly. Our card dispensor worked mainly by using gravity. However, the cards were getting stuck in the card wheel and would not dispense properly because of it. We tried a lot of differnet ways to fix this problem and ended up with making tape washers that would prevent the cards from getting lodged. It ended up working but it took a long time to come up with the idea and implament it in order that everyhting would work smoothly. </br>
+                <div>
+                    <img src="Team/progress/img/dgue_tape.JPG"></img>
+                </div>
+            <b>Menuing system</b><br>
+            <b>For the SPI screen we had to figure out how the user would input what their shuffling preference was. This included picking the suit and number the user wanted. For this I decided that I would want to display the suits out. This was harder then expected since I had to make the shapes only out of circles and triangles. Shown below are the figures that I came up with after some guess and check work.</br>
+                <div>
+                    <img src="Team/progress/img/dgue_spisuit.JPG"></img>
+                </div>
+                <div>
+                    <img src="Team/progress/img/dgue_spivalue.JPG"></img>
+                </div>
+            <b>Power System</b><br>
+            <b>Our 12-5 step down dc converter got shorted while we were working on our project. We suspect it has something to do with a metal pick that connected two points that should not have been connected. This causes us to switch our power converter to an LDO. This came with its own challenges such as too much heat being generated and not enough current being sent through th effectively power everything. At the end we were not able to solve all of these problems that came with a different power supply</br>
+
+            <h4>Week 13:</h4>
+            <b>Date:</b> 4/13/2023 <br>
+            <b>Total hours:20 <br>           
+            <b>Description of project design efforts:</b><br>
+            <b>My team and I have been in lab all week. The majority of our time was spent putting together our project and making sure everything work. This included finalzing the packaging and debugging all of our components.</br>
+            <b>Stepper Motor</b><br>
+            <b>The stepper Motor was not working on starting up. We tried figuring out what was going wrong. We ended up concluding that some of the components were not sodered on correctly. After fixing this though their was still a problem where the motor would not start up or spin. After checking a lot of things we decided to chage the resistor value in order to change the current going into the motor. This helped by increasing the torque into the motor. In addition to this we also changed the code to increase the pulse frequency. Overall though the main problem we found is that the code would not update properly if the debugger was unplugged from the computer first. Once this worked everything worked accordingly.</b><br>
+            <b>In addition to this we also increased the torque on the motor becasue it was not spinning the wheel properly. Attached below is the circuit after we changed up the resistors that impacted the reference current and ensured all the parts were soldered on correctly.</b><br>
+            <div>
+                <img src="Team/progress/img/dgue_pcbb.JPG"></img>
+            </div>    
+            </b></br>
+            <b>Mechanical Design</b><br>
+            <b>We also started putting together the mechanical design. This included putting the motor into the wheel. This proved to be more diffiult then we expected since precision is very important for our project. In addition to this it is important that the motor and the staff to be tight together in order for the movenemt to be precise. </br>
+            <b>DC Motor</b><br>
+            <b>I also attached the diode onto the DC motor. When I did this it was important that the diode was attached correctly in order to properly take the current that would charge back when the motor deaccelerated. It was also important that the dc motor would spin the right direction. This was important to check since we did not control the direction the motors would spin. Attached below is a picture of the DC motor attached to everything.</br>
+            <div>
+                <img src="Team/progress/img/dgue_dcmotor.JPG"></img>
+            </div>
+
+            <h4>Week 12:</h4>
+            <b>Date:</b> 4/7/2023 <br>
+            <b>Total hours:</b> 10 <br>           
+            <b>Description of project design efforts:</b><br>
+            <b>PCB Assembly and Verification</b><br>
+            <b> After looking at my PCB more I realized that I soldered one of the stepper motor drivers incorrectly. Taking it off and straighting the pins took me a long while since the chip is super small. In addition to this I also finished soldering the last of the pieces onto the PCB as well as clipping anything that was poking out from the bottom. From here I started testing things to ensure that everything was working properly with wall power. Even though we tested power through the machines we tried it with wall power and everything worked perfectly. From here we tested things like ensuring that the PCB could successfully power the raspberry pi. Another problem I ran into was that when the board was powered one of the stepper motor drivers would get really hot. I tried fiddling around with it with no fix but when my lab partner came into lab it was no longer overheating so we will stress test it next week to ensure the problem has been resolved. Finishing up the PCB and ensuring that everything was wired properly took up a lot more time this week then I was expecting. Below is a picture of the finished design. </b>
+            <div>
+                <img src="Team/progress/img/dgue_pcn_final.JPG"></img>
+            </div>
+
+            <h4>Week 11:</h4>
+            <b>Date:</b> 3/31/2023 <br>
+            <b>Total hours:</b> 12 <br>           
+            <b>Description of project design efforts:</b><br>
+            <b>PCB Assembly and Verification</b><br>
+            <b>The majority of my work this week was soldering together our PCB. This constitutued by both practicing how to solder as well as actually soldering on the components. Before we started I worked on practicing soldering surface mount compoents. This consisted of both capacitors as well as the microcontroller that we were going to be using. In addition to this I also practiced on how to solder through-hole though that was easier to pick up. Once I felt confident I started soldering the components on the board. Starting with our power source and checking and ensuring that the connections were good and that my components were correct as I was going through. Examples of this was ensuring that the lights would turn on and that the buttons worked as intended. All of our components that were off board have not yet been set up but I plan on testing that next week. Below is a picture of our PCB. </b>
+            <div>
+                <img src="Team/progress/img/dgue_pcb_assembly.jpg"></img>
+            </div>
+            <b>Note that this PCB is not the final. I forgot to take a picture of it but it is completly soldered. I will go to lab tomorrow to take an updated picture this weekend.</b><br><br>
+            <b>My plan for the next week is to test all of the off board components in order to ensure that everything is working properly and from here I will work on packaging our design.</b>
+
+            <h4>Week 10 & Spring Break:</h4>
+            <b>Date:</b> 3/10/2023 <br>
+            <b>Total hours:</b> 10 <br>
+            <b>Side note: Spring break I was out all week with a place with no internet and this week I have a lot of activities outside of school. I already communicated all of this with my team. <br>
+            <b>Description of project design efforts:</b><br>
+            <b>PCB Design</b><br>
+            <b> Before I left for break I was still working on improving our groups PCB design. I changed things like increasing the track widths for the tracks that were carrying a higher voltage. I also created two seperate ground plans and had them connected at one point just to decrease the noise around the micro and other sensative stuff on the PCB. I also added resistors and capacitors to protect the micro. Unfortunatly the capacitors that I used for the PCB design was not the size that I thought and my team and I did not realize this until I was already away. My teammates used the PCB I worked on as a starting point to create our final PCB design. Shown below is our teams final PCB design.</b>
+            <div>
+                <img src="Team/progress/img/zwill_fixed_pcb.jpg"></img>
+            </div>
+            <b>PCB Verification</b><br>
+            <b>On Wednesday I went over two of our PCB's and verified that everything was wired correctly. The first thing I did was ensure that everything was connected to ground properly. From there I ensured that all the connections from the micro outwards were wired properly. Finally I tested all other connections like between resistors and other smaller connections. I tested all of the connections by using a voltmeter and making sure that there was no resistance between any two points.</b>
+            <br>
+            <b>Legal and Regulatory Analysis</b><br>
+            <b>This week was my turn to write the individual report. For this I looked up what patents our design used and made sure that our devise meets all standards.</b>
+
+            <h4>Week 8&9:</h4>
+            <b>Date:</b> 3/10/2023 <br>
+            <b>Total hours:</b> 20 <br>
+            <b>Description of project design efforts:</b><br>
+            <b>PCB Design, before Midterm Report</b><br>
+            <b> The majority of my work this week was finalizing the PCB design and cleaning up the schematic. I had to finish up the PCB Design for the midterm report. This included ensuring that all components of the PCB were included into the schematics. This meant communicating with my team about everything that was prototyped and ensuring that the things that they did prototype carried over on the circuit board. I also ensured that the PCB design closely mirrored the schematic design by constantly checking between the two versions. Posted below is the PCB that I designed for the midterm review. Also to follow up with this, I also worked on the presentation and practiced my presentation skills. </b>
+            <div>
+                <img src="Team\progress\img\dgue_pcb_mid.jpg"></img>
+            </div>
+            <br>
+            <b>PCB revisions</b><br>
+            <b> The main things that I heard back was that I needed capacitors between my capacitors for power and ground. I also needed to increase the width of my track lines for ground and power for my 12 volt track. I needed resistors for all of the GPIO pins in order to protect the micro. I also needed to install a laser beam and an max7375 into my system. Finally, I needed to add a split power ground that was only connected at a singular point. I made all of these changes to my circuit and will be ordering the PCB very shortly. </b>
+
+            <h4>Week 7:</h4>
+            <b>Date:</b> 2/24/2023 <br>
+            <b>Total hours:</b> 8 <br>
+            <b>Description of project design efforts:</b><br>
+            <b>PCB Design</b><br>
+            <b> My entire work for this week was working on the PCB design. My group has prototyped the majority of stuff that we need for the design so right now our main focus was to ensure that the PCB design had everything needed.</b>
+
+            <h4>Week 6:</h4>
+            <b>Date:</b> 2/17/2023 <br>
+            <b>Total hours:</b> 5 <br>
+            <b>Description of project design efforts:</b><br>
+            <b>Finalizing parts</b><br>
+            <b>I finalized the final parts that we were going to be using. Making sure that everything we prototyped was what we were going to use. I also researched the voltage min and max and current min and max for all the devices to ensure that everything will be powered correctly when I make my pcb design. </br>
+            <br>
+            <b>Schematic Design</b><br>
+            <b>Now that I knew all of the parts I can throw it together in a schematic. The main challenge with this was making sure that everything was hooked onto the right GPIO pin. For the most part they didn't need anything special except for a few. For example, the motor needs to be put in alternate mode in order to control the steps of the motor.</b>
+
+            <h4>Week 5:</h4>
+            <b>Date:</b> 2/10/2023 <br>
+            <b>Total hours:</b> 6 <br>
+            <b>Description of project design efforts:</b><br>
+            <b>Documentation</b><br>
+            For this assignment I had to fill out the bill of materials for the different motors and voltage dividers that we would be using. This consisted of communicating with my group in order to ensure that all the components would have the voltage needed in order to safely power everything in our circuit. </br>
+            <br>
+            <b>Prototyping</b><br>
+            I also started working on ensuring that I could power the DC motor with the GPIO pins. Since the design does not require the DC motor needing to be turned off instantly or the direction of the motor changing made the circuit more simple then other designs. I tested to ensure that the DC motor can spin as well as making sure that it can be turned on and off. </br> 
+
+            <h4>Week 4:</h4>
+            <b>Date:</b> 2/3/2023 <br>
+            <b>Total hours:</b> 8 <br>
+            <b>Description of project design efforts:</b><br>
+            <b>Documentation</b><br>
+            This week I was assigned to work on the electrical overview for our project. This involved double checking all of the voltage and current limits of all the devices that we will be using as well as finalizing how all of our components will communicate with each other (SPI, UART). Overall, looking at all the datasheets as well as making the system block diagram took me around 1-2 hours. </br>
+            <br>
+            In addition to this I also worked on refining our PSSC's and project description to be more specific and detailed. I also worked on part of the component analysis comparing the different types of motors out there and why our team went with the stepper motor. </br>
+            <br>
+            <b>Part Ordering</b><br>
+            Now that I got my stepper motor working I can start working on the card dispenser. For this week I started brainstorming how this would operate both on a mechanical point of view as well as a users point of view. When I say mechanical point of view I mean making sure that it will operate efficiently with the rest of the system. This being that the camera will be able to read the card and that it will be able to properly dispense. From the user point of view I want to make sure that them being able to place the deck of card into the shuffler is intuative and simple. </br>
+            <br>
+            <b>Printed Circuit Board</b><br>
+            I also contunited working on developing my PCB skills. I started work on the project my modeling the stepper motor driver chip and the design that goes into it. I am making sure that the capacitor and resistors values are correct. In my prototyping I was given a module that worked with the chip. This module came with a potentiometor to correctly choose the correct current level. Since in my actual design the current level will not change I had to calculate the correct components in order to get the same current that I had in my prototype.</br>
+            <br>
+            <h4>Week 3:</h4>
+            <b>Date:</b> 1/27/2023 <br>
+            <b>Total hours:</b> 6 <br>
+            <b>Description of project design efforts:</b><br>
+            <b>Learning PCB tools</b><br>
+            Having never designed a PCB before I started researching the different programs that would assist me in creating the PCB. Not being too familiar with any of the prgrams I mainly spent my time working in KiCad. After watching a youtube tutorial showing the basics of the program I downloaded the software and tried it out myself. Overall, I spent around two hours this week getting familiar with the program. </br>
+            <br>  
+            <b>Debugging Stepper Motor</b><br>
+            Last week I was stuggling to get the stepper motor to work properly. After getting help in lab I realized multiple things that were wrong. For starters, the driver module that I was using was not working properly. Another thing I noticed is that the potentiometer only has a 270 degrees of rotation. I was spinning it multiple times and broke the potentiometer on the module. This potentiometer is important because it regulates the current and dictates the amount of torque the motor can recieve. However, after getting a new chip and setting the current to a safe and desirable number, I finally got the motor spinning the way I wanted. Overall with finding these errors and correcting them and tweaking things, this took me about 2 and a half hours.</br>
+            <div>
+                <img src="Team/progress/img/dgue_motor_debug.JPG"></img>
+            </div>
+            <br>
+            <b>Rewriring and Wiring LCD Screen</b><br>
+            I moved the motor and wiring that came with it onto a bigger circuit board. I did this so that way I could have all of the different components on one breadboard. I also wired up the LCD screen and connected it to the arduino. I started researching different display libraries to create a basic menu that will eventually be controlled by push buttons. Overall, this took me an hour. </br>
+            <div>
+                <img src="Team/progress/img/dgue_motor_screen.JPG"></img>
+            </div>
+            
+            <h4>Weeks 1-2:</h4>
+            <b>Date:</b> 1/20/2023<br>
+            <b>Total hours:</b> 12 <br>
+            <b>Description of project design efforts:</b><br>
+            The past two weeks I have worked on setting up and brainstorming how our design will look like for the upcoming semester. I have started brainstorming and testing potential solution to our problems. I have also done some required paperwork for my project</br>
+            <br>
+            <b>Initial PCB Design & User Interface Design</b><br>
+            I started thinking about our PCB. Most importantly, what will be printed on our circuit board. From here I started to think about what devices would need to be connected. Examples of this is how many motors were needed and what other components would be needed in order for them to run. Some components are resistors and capacitors and thinking about a power source for the motor since our big one reqires extra power. I also stated thinking about the UI design for the project. Mainly focusing on how many push bottons I would need and how the design would look so that way I can start planning the button matrix for the project. The main thing I was contemplating for the button matrix is to do simple arrow keys or to map out ace to king and the four suits but our group ultimatly decided to go with arrow keys. </br>
+            <br>
+            I don't know why my pictures aren't loading will ask a TA as soon as I can. The picture shows our brainstorming board about what components will be wired with the PCB as well as how.</br>
+            <div>
+                <img src="Team/progress/img/dgue_peripherals.JPG"></img>
+            </div>
+            <br>
+            <b>Working on the motor design for the wheel</b><br>
+            I also started working on the circuit layout for the motor. As of right now I am prototyping using an arduino and a stepper motor. Since the stepper motor is not exactly the degree we want (since we have 52 slots we roughly want 6.9 degrees per rotation), we want to make sure that a close approximation would be enough for the cards to still go into the correct bin. I am still working on the circuit of the motor but the test code that I wrote for the arduino is good to go.  </br>
+            <br>
+            The picture below shows my progress with the motor circuity.</br>
+            <div>
+                <img src="Team/progress/img/dgue_motor_circuit.JPG"></img>
+            </div>
+            <br> 
+            <b>Website</b><br>
+            I set up the website and made sure that everything was set to team 3. Setting up the website took me a while becasue I was importing the file of the website template instead of just its contents which made the website look very different then what it should have looked like. </br>
+            <br>
+
+        </div>
+	
+		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
+		<div id="footer"></div>
+    </div>
+</div>
+
+<!--JS-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.1.1.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#header").load("header.html");
+	$("#menu").load("navbar.html");
+	$("#footer").load("footer.html");
+});
+</script>
+</body>
+</html>

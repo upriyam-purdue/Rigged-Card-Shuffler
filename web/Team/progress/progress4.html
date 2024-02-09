@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+This is an example weekly progress report document that team members can use to report their individual progress 
+of their ECE477 senior design projects. Weekly progress reports are expected to follow the general guidelines
+presented in the "Progress Report Policy" document, posted on Brightspace.  
+
+Please create 4 copies of this example, renaming each copy to <PurdueID>.html, where <PurdueID> corresponds to
+the Purdue ITAP Career Account ID given by Purdue to each individual team member. If you have any questions,
+contact course staff.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--Reconfigurable base tag; used to modify the site root location for root-relative links-->
+<!--<base href="https://engineering.purdue.edu/ece477/StudentWebTemplate/" />-->
+    <base href="https://engineering.purdue.edu/477grp3/" /> <!-- Replace the N with your team number-->
+
+<!--Content-->
+<title>ECE477 Course Documents</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="George Hadley">
+<meta name = "format-detection" content = "telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!--CSS-->
+<link rel="stylesheet" href="css/default.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/content.css">
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<style>
+    .fig {
+        max-height:50%;
+        max-width:50%;
+    }
+
+    .fig-wrap {
+        margin: auto;
+        width: 50%;
+        border: 3px solid black;
+        padding: 10px;
+        justify-content: center;
+    }
+</style>
+
+</head>
+<body>
+<div id="wrapper_site">
+    <div id="wrapper_page">
+	<!-- Instantiate global site header.-->
+	<div id="header"></div>
+		<!-- Instantiate site global navigation bar.-->
+		<div id="menu"></div>
+	
+		<!-- Instantiate a page banner image. Page banner images should be 1100x350px and should be located within the local
+			img folder located at this directory level. -->
+		<div id="banner">
+			<img src="Files/img/BannerImgExample.jpg"></img>
+		</div>
+	
+		<!-- Instantiate "tools" needed for a page. Tools are premade functional blocks that can be used to build a page,
+			and include things such as a file lister (for listing out homework assignments or tutorials)
+		-->
+		<div id="content">
+            <h2>Progress Report for Zachary Williams</h2>
+
+            <h4>Week 13:</h4>
+            <b>Total hours:</b>50<br>
+            <b>Description of project design efforts:</b><br>
+            This week was heavily focused on integration and prepping for the final demonstration.</br>
+            <br>
+            <b>Final Assembly and Construction</b><br>
+            This week, Brian and I mounted the newly printed card hopper that had rails on it along with the stepper motor and dc motors to finish the dispenser mounting. This took a large amount of time because the spacing was extremely precise and required a decent amount of trial and error for each piece. Once those were mounted, I focused on getting the holes for the buttons and LCD screen cut and ready for mounting. This was a very long process since they were all relatively small and I couldn't find a good way to get them to a square shape without resorting to just using a file to slowly open them up and shape them. After all of the motors and UI elements had mounting holes, I cut and drilled holes to attach the top and front of the box using hinges for the front of the box to allow for easy access to the internals. The last thing that I did mechanically was mounting the PCB and Raspberry Pi. I had to use 2/56 screws for our PCB along with nuts to give space underneath for the decoupling caps and I used 4/40 screws and standoffs for the raspberry pi. Once all of the electronics were mounted and the box was put together I attached the PCB to the PI and to all of the peripherals to be ready for the demo.</br>
+            <div>
+                <img src="Team/progress/img/zwill_box_all_put_together.jpg"></img>
+            </div>
+            <b>Box all put together</b><br><br>
+
+            <b>Last Minute Mechanical and Electrical Failures</b><br>
+            During the last week, we had extensive mechanical and electrical failures that set us back a lot. While I was trying to hand make the rails for the card hopper, I made a mistake and ended up accidentally melting our previous card hopper which caused us to have to fully cad the hopper with the rail system and get this printed. This was not finished printing until thursday so there was a lot of time wasted getting this ready and testing when we could have been testing the dispensing system prior to this. Around thursday, there was an accidental short that caused our 12-5V converter to break. Luckily it seemed like only the converter broke and the rest of the PCB was undamaged, however, this was only based on the fact that other peripherals were working and wasn't fully tested due to the lack of time. We were able to get an LDO to step down to 5V, however, we were a bit uncertain about whether the LDO would be able to handle all of the power we were dissipating. Theoretically it should have been able to handle it, however, it was close to the theoretical limit. This ended up coming back and caused issues for us on Friday. About an hour before our demo, the LDO was heating up an excessive amount along with many other of the elements of the PCB. In hindsight, we did not fully test our PCB with every part integrated at once, so we might have caught the cause of this earlier if we had. However, this did end up resulting in the stepper motors heating up far too much and the stepper motor mount for the card dispenser began to melt and sag causing the wheel to be too low and the dispensing system to not function anymore. On top of all of this, the DC motors would not run on the hardware after full integration. Personally, I think that the short may have fried the micro pins meant to turn on the DC motors as the short seemed to affect the 12 V section, however, this also could have been caused by the power supply not being able to supply quite enough to drive those along with the rest of the system. On top of all of this, it was discovered that the stepper motor attached to the card wheel no longer had the torque to spin the wheel even under no load. The cause of this is unknown but we tried increasing the reference current up to the limit of the stepper motors to combat this.</br>
+            <div>
+                <img src="Team/progress/img/zwill_stepper_motor_mount_melted.jpg"></img>
+            </div>
+            <b>Stepper Motor Mount Melted</b><br><br>
+
+            <b>Created Menuing System For SPI</b><br>
+            During this week, I created the menuing system that would allow the user to choose the game, number of players, and the winner. The system required a slight redesign in order to allow for the storage of the data during the menu navigation. This data was then taken and sent to the Pi using UART functions to write strings.<br>
+
+            <b>Maybe Missing some info</b>
+            This week has been extremely exhausting and I honestly don't remember each single thing that I worked on or did so take the amount that I wrote with a bit of leeway since I know I spent that much time in lab but not too many pictures were taken and not a lot of the specific things that I did I remember well. With that said, the project ended up not functioning at the end of the day and I will be thinking about what we could have done differently design wise for it to have functioned correctly.<br>
+
+            <h4>Week 13:</h4>
+            <b>Total hours:</b>19<br>
+            <b>Description of project design efforts:</b><br>
+            This past week was focused on getting our preliminary checkoffs done and attempting to wrap up the assembly and mechanical design for the final product..</br>
+            <br>
+            <b>Mounted parts onto the Housing</b><br>
+            This week, Brian and I were heavily focused on the mechanical design and assembly during the first half of the week. We were hoping to get both the card wheel and motor mounted as well as the card dispenser pieces mounted. We were able to get the stepper motor for the card wheel mounted after some issues that we had with the coupling slipping. We reprinted the coupling with 100% infill in order to make it more structurally sound. This worked well, however, we will try to reprint the coupling in order to get the rod more straigtly aligned. In terms of the card dispenser, we mounted the DC motors with their rollers along with a 3D printed shelf for the rollers. The shelf was meant to help with the alignment of the rollers to give more consistent results, however, we realized that even with the shelves, the alignement was not perfect. Because of this, we rethought the dispensing mechanism to have a guide on either side to allow for more consistent dispensing into the card wheel.</br>
+            <div>
+                <img src="Team/progress/img/zwill_box_stepper_mounted.jpg"></img>
+            </div>
+            <b>Box with stepper motor mounted</b><br><br>
+            <div>
+                <img src="Team/progress/img/zwill_box_DC_mounted.jpg"></img>
+            </div>
+            <b>Box with DC Motors mounted</b><br><br>
+
+            <b>Debugged SPI for LCD Screen on Final Hardware</b><br>
+            One of our preliminary PSSCs is using SPI to control an LCD screen using the final hardware. Originally, this didn't seem to work on the PCB, however, with some work, I was able to get it working. I found a weird issue where if the debugging cable is unplugged from the computer below the STLink the LCD screen does not work even resetting the micro did not help. I asked Joe about this and he did not know what the cause of this was, however, I was still able to show the use of SPI, so Joe counted this as a checkoff.<br>
+            <div>
+                <img src="Team/progress/img/zwill_LCD_on_pcb.jpg"></img>
+            </div>
+            <b>LCD Screen Displaying from the PCB</b><br><br>
+
+            <b>Wrote Code to Convert Between Bin Number and Steps</b><br>
+            In order for the preliminary checkoff of precisely rotating the card wheel using the stepper motor, we needed code that could move 1 bin at a time. This code was relatively simple since we had a script to calculate the number of steps to get to a bin from the first bin. We took these calculated values and have them stored in an array, we use the direction as well as the array as a lookup table to determine the number of steps between the current bin and the bin we need to move to. This allowed us to move between each bin 1 at a time and this was checked off by Joe as one of our preliminary PSSCs.<br>
+
+            <b>TODO</b>
+            <ul>
+                <li>Make guides for the card dispenser</li>
+                <li>Integrate separate parts of the system software into the larger project</li>
+            </ul>
+
+            <h4>Week 12:</h4>
+            <b>Total hours:</b>8<br>
+            <b>Description of project design efforts:</b><br>
+            This past week was focused on getting the mechanical design much closer to finished. This included the construction and 3D printing of many things to get ready for the final construction.</br>
+            <br>
+            <b>Built the Box to house the Project</b><br>
+            Now that all of the pieces are cut and ready for assembly, I went in and drilled all of the holes necessary for assembly and assembled the box so that we can begin laying out the final project. I left the front and top off of this so that we can easily access the inside and place everything inside.</br>
+            <div>
+                <img src="Team/progress/img/zwill_box_put_together.jpg"></img>
+            </div>
+            <b>Box Put together</b><br><br>
+
+            <b>Made Measurements for and Attached Card Wheel to Box</b><br>
+            Now that we have the housing put together, I can start laying out how the internals will all fit together. The start of this is placing the Card wheel into the housing in order to get the spacing correct on the card dispensing mechanism. Now that the card wheel is in, we can move backwards placing the DC motors, then the card holder and the stepper motor. This will hopefully all be done before next ManLab, however, this will come down to how quickly we can get 3D prints done.<br>
+            <div>
+                <img src="Team/progress/img/zwill_box_with_card_wheel.jpg"></img>
+            </div>
+            <b>Box with Card Wheel Attached to it</b><br><br>
+
+            <b>Cut and Bent Pieces To Mount Card Holder</b><br>
+            To begin the planning for mounting the card dispensing mechanism, we realized that the card holder that we have printed currently does not have any builtin mounting mechanism. Because of this, we will need to add a mounting method to it. I thought that the use of acrylic would work well since we could heat it up to make it maleable and it will be nice and sturdy after cooling down. I cut and bent the pieces of acrylic so that they can be used to mount the card holder later this weekend/next week.<br>
+            <div>
+                <img src="Team/progress/img/zwill_card_holder_with_mounting.jpg"></img>
+            </div>
+            <b>Card Holder with Mounting Pieces Next to It</b><br><br>
+
+            <b>TODO</b>
+            <ul>
+                <li>Mount DC Motors</li>
+                <li>Mount Card Holder</li>
+                <li>Mount Stepper Motors</li>
+                <li>Cut Metal Rod Down to Correct Size</li>
+            </ul>
+
+            <h4>Week 11:</h4>
+            <b>Total hours:</b>8<br>
+            <b>Description of project design efforts:</b><br>
+            This past week was very heavily focused on getting the materials ready to start the construction of the housing and the overall project.</br>
+            <br>
+            <b>Determined Actual Sizes for Box Sides</b><br>
+            I used Fusion360 to figure out the sizes that the wood should be cut to in order to allow for the width of the wood. I modeled each piece of wood in Fusion360 prior to asking the machine shop to cut the pieces. </br>
+            <div>
+                <img src="Team/progress/img/zwill_box_sides_3D.jpg"></img>
+            </div>
+            <b>3D Model to Make Sure Side Sizes form the right size box</b><br><br>
+
+            <b>Gathered Materials for Construction and Got wood Cut</b><br>
+            I gave the measurements I had for the wood that I needed cut to the machine shop, once these were cut, I realized that I would need some more pieces cut in order to connect each side firmly. I went to pick up the materials that will be needed to construct the housing, including wood screws, hinges, and wood for construction. I also picked up a dowel that we can use in order to make the rollers for the DC motors along with the use of rubber O-rings. The construction has not been finished yet, however, I am hoping to have the box done at the end of the weekend.<br>
+            <div>
+                <img src="Team/progress/img/zwill_materials.jpg"></img>
+            </div>
+            <b>Cut Wood Sides and Materials from Hardware Store</b><br><br>
+
+            <b>TODO</b>
+            <ul>
+                <li>Build Housing</li>
+                <li>Make rollers for DC Motors</li>
+                <li>Make Stepper Motor to Card Bin Mating</li>
+            </ul>
+
+            <h4>Week Spring Break/10:</h4>
+            <b>Total hours:</b>18<br>
+            <b>Description of project design efforts:</b><br>
+            Over spring break Brian and I worked on fixing the PCB design and ordering our final PCB. During this past week, I've been focused on the mechanical design for our project.</br>
+            <br>
+            <b>Fixed issues with PCB Design</b><br>
+            During the lead up to spring break, it was discovered that we still had some pretty glaring issues with our PCB that needed to be changed. Most critically, we discovered that the footprints for all of our capacitors were 0603 instead of 0805. Since Dan was no longer available when we found this out, I worked with Brian who was still on campus to figure out a good fix for this. Originally, we tried just updating the footprints but this lead to numerous footprint collisions and would have taken an extremely long time to fix all of them. We instead opted to remake the PCB from scratch based on the same schematic. We were able to do this in a slightly more organized way by using ground planes more effectively and were able to get the design approved and ordered on monday.</br>
+            <div>
+                <img src="Team/progress/img/zwill_fixed_pcb.jpg"></img>
+            </div>
+            <b>Fixed PCB Design</b><br><br>
+
+            <b>Made 3D Model for Stepper motor Mount</b><br>
+            Now that our PCB was ordered the most important thing for me to work on was the mechanical design in which I am designing the motor mounting as well as finalizing the size of our overall housing. I started by creating a 3D model of a stepper motor mount that would allow us to connect a holder to the housing and then seal the stepper motor inside with a lid, if need be we are also able to use the mounting holes on the stepper motor for a more secure connection. Due to some uncertainty, we will be drilling the holes for attaching the mounts to the housing and the lid to the mount after printing to allow for easier adjustments later on.<br>
+            <div>
+                <img src="Team/progress/img/zwill_stepper_motor_mount.jpg"></img>
+            </div>
+            <b>Stepper Motor Mount</b><br><br>
+
+            <b>Got measurements for final Housing</b><br>
+            After making some changes to the layout of our motors in the assembly with the updated PCB size and motor mounts included, I was able to measure the size of the box that would be needed. I measured it as 14x11.25x8 inches, so using these measurements, we can cut up some plywood and construct our rough housing.<br>
+            <br>
+            <div>
+                <img src="Team/progress/img/zwill_final_assembly.jpg"></img>
+            </div>
+            <b>Final Sizes for Housing</b><br><br>
+
+            <b>TODO</b>
+            <ul>
+                <li>Cut peices for housing</li>
+                <li>3D Print Stepper motor mount</li>
+            </ul>
+
+            <h4>Week 8/9:</h4>
+            <b>Total hours:</b>20<br>
+            <b>Description of project design efforts:</b><br>
+            These last couple weeks, we have been focused heavily on PCB design and the midterm design review.</br>
+            <br>
+            <b>Formalized Schematic</b><br>
+            These last two weeks, I took the schematic that Dan had been working on and reformatted it for the midterm design review. I updated this with Dan to add in the changes that needed to be made based on feedback.</br>
+            <div>
+                <img src="Team/progress/img/zwill_final_schematic.jpg"></img>
+            </div>
+            <b>Final Formalized Schematic</b><br><br>
+
+            <b>Helped finishing PCB and Ouput Gerber files for JLCPCB</b><br>
+            Dan and I changed our PCB design to use separate ground planes for the 12V and the rest of the board. We connected these at one point between two terminals of the 12-5V regulator. After this was updated, we used the checker from JLCPCB to check if the print was valid. The gerber files showed as being valid so we are just waiting on approval from Joe to order the PCB.<br>
+            <div>
+                <img src="Team/progress/img/zwill_PCB_with_ground_planes.jpg"></img>
+            </div>
+            <b>PCB with Ground Planes</b><br><br>
+
+            <b>Midterm Design Review</b><br>
+            Most of last week was spent preparing for the midterm design review. This included preparing the presentation as well as the above work listed. I was mainly involved in the schematic, pcb and prototyping that was done to prep for the midterm design review.<br>
+            <br>
+
+            <b>TODO</b>
+            <ul>
+                <li>Finalize and Cut Mechanical Design at Home</li>
+            </ul>
+
+            <h4>Week 7:</h4>
+            <b>Total hours:</b>10<br>
+            <b>Description of project design efforts:</b><br>
+            This week I worked on developing the stepper motor movement by using OPM instead of PWM and spent time preparing things for mechanical construction and part procurement.</br>
+            <br>
+            <b>Implemented OPM for Driving Stepper Motor</b><br>
+            This week I took what I had done last week implementing PWM to drive the stepper motor and changed it to take some N number of steps on command. Based on the knowledge that we will need to drive 2 stepper motors, I decided to use Timers 15 and 16 for OPM and once the timers and alternate function GPIO pins were set up, I executed a function on a button press that would send N pulses to the stepper motor driver. This showed that this should be possible to activate fully through software fitting what is needed.</br>
+            <div>
+                <img src="Team/progress/img/zwill_stm32_stepper_motor_opm.jpg"></img>
+            </div>
+            <b>Stepper Motor Set Up to be Driven by OPM from Timer 15</b><br><br>
+
+            <b>Worked on Legs for Product</b><br>
+            This week, I also worked on creating a temporary mounting system to allow us to be able to test the card dispensing and shuffling without having to have the fully made and polished casing. The idea is to just have two simple legs with 45 degree angles cut on each side so that they meet flush with each other and the table. I determined the length that these should be based on some estimates and measurements taken from the currently printed housing. These are not yet cut because the machine shop was closed when I was ready to cut these, but this is planned to be cut early next week.<br>
+            <div>
+                <img src="Team/progress/img/zwill_legs_precut.jpg"></img>
+            </div>
+            <b>Wood with Cut and Drill Marks Drawn</b><br><br>
+
+            <b>Picked Up Parts for Product Construction</b><br>
+            Brian and I went to Menards and picked up the parts that will be necessary to actually construct a functional prototype so that after midterm design review we will be able to start testing functionality relatively quickly.<br>
+            <br>
+
+            <b>Put Together Order For Final Parts</b><br>
+            This week I put together a large order consisting of many of the final electrical parts that we need including the wall power adapter, step-down voltage regulator, etc. and the mechanical parts including all of our motors, motor mounts and a wheel for the card dispenser. <br>
+            <div>
+                <img src="Team/progress/img/zwill_order_request.jpg"></img>
+            </div>
+            <b>Pololu Order Request</b><br><br>
+
+            <b>TODO</b>
+            <ul>
+                <li>Help Polish PCB Design and test Footprint</li>
+                <li>Cut Legs</li>
+                <li>Midterm Design Review Stuff</li>
+            </ul>
+
+            <h4>Week 6:</h4>
+            <b>Total hours:</b>8<br>
+            <b>Description of project design efforts:</b><br>
+            This week I worked on integrating the stepper motor driver into the stm32 hardware and embedded software. I also worked on the Software Formalization document.</br>
+            <br>
+            <b>Began integrating stepper motor into STM32</b><br>
+            This week, I began working on getting the stepper motor driver connected to the stm32. I had some trouble with the wiring at first, however, after talking with Dan, he helped me get the driver connected correctly. I then wanted to test the frequency that we could send steps to the motor driver at. After getting PWM working on Timer 1, I was able to get test the limits of the stepper driver and discovered it is somewhere around 80 HZ. This means that we could at maximum spin 4 full rotations per second at no load. The software that I wrote so far is not at the point where I can specify the number of steps and it will stop, however, I determined that using a timer in one pulse mode would likely be the best way to implement this.</br>
+            <div>
+                <img src="Team/progress/img/zwill_stm32_stepper_motor.jpg"></img>
+            </div>
+            <b>Stepper Motor Being Driven by STM32</b><br><br>
+            <div>
+                <img src="Team/progress/img/zwill_stm32_stepper_motor_driver.jpg"></img>
+            </div>
+            <b>Stepper Motor Driver Implemented within the STM32 Hardware</b><br><br>
+
+            <b>Worked on A8 - Software Formalization</b><br>
+            This week, I completed the software formalization document. This required me to communicate with the rest of the team working on the UART, Stepper motor, and Raspberry pi code since I was not confident in my personal knowledge of the software. We discussed how the software will be tested and I determined how the software should be separated into components. The raspberry pi software will largely be tested separately from the embedded software, while the embedded software will largely be tested through the LCD and button UI.<br>
+            <br>
+
+            <b>TODO</b>
+            <ul>
+                <li>Work on PCB Design with Dan</li>
+                <li>Write software to make the stepper motor take N steps</li>
+                <li>Work on Midterm Design Review Presentation</li>
+            </ul>
+
+            <h4>Week 5:</h4>
+            <b>Total hours:</b>12<br>
+            <b>Description of project design efforts:</b><br>
+            This week I focused heavily on stm32 integration of the LCD screen and button inputs. I also worked some on documentation this week.</br>
+            <br>
+            <b>Began development on STM32 Microcontroller</b><br>
+            This week, I began working in SystemWorkbench to start the stm32 development for the project. I found old projects that I had worked on in ECE 362 and was able to take these to start testing the LCD and EXTI button interrupts for the STM32. After trying to build and run my code on System Workbench I ran into errors with the debug configuration. After going into lab and talking to Joe about this, he helped me get the LCD working and helped me with determining a debouncing circuit for the exti button interrupts.</br>
+            <br>
+            <b>Wrote menuing system on STM32</b><br>
+            After getting the LCD screen and button interrupts working on the stm32, I decided to make a menuing system that allows for generalized screen states allowing for other users to add their own menus for the card shuffling as well as a testing menu. I got the software working after a lot of trial and error using structs. I landed on using global variables that change state functions will modify to allow for the easy addition of new states into the menuing system.<br>
+            <div>
+                <img src="Team/progress/img/zwill_stm32_menuing.jpg"></img>
+            </div>
+            <b>STM32 Displaying Starting Menu</b><br><br>
+
+            <b>Worked on Bill of Materials</b><br>
+            This week, I also worked on the Bill of Materials document, adding the components necessary for the LCD display as well as the button inputs. I also included the microcontroller in the document.<br>
+            <br>
+            <b>TODO</b>
+            <ul>
+                <li>A8 - Software Formalization</li>
+                <li>Begin UART/Stepper Motor Integration onto STM32</li>
+                <li>Work on schematic to add lcd and buttons</li>
+            </ul>
+
+            <h4>Week 4:</h4>
+            <b>Total hours:</b>12<br>
+            <b>Description of project design efforts:</b><br>
+            This week I focused heavily on prototyping and determining the final electrical design based on the microcontroller that we plan to use.</br>
+            <br>
+            <b>Attempted to begin development on STM32 Microcontroller</b><br>
+            This week I started trying to write code and prototype the electrical design for the microcontroller using STMCubeIDE. I was having a lot of trouble with this, however, I discovered a library for the ILI9341 LCD driver for STM32 microcontrollers(https://www.micropeta.com/video37). After talking to Joe and Phil, I realized that the issue that I was having was that the ST-Link that we got through ECE 362 is not official and because of this, it does not work with CubeIDE. Joe gave me an official ST-Link and the install file for SystemWorkbench so whichever way I decide to develop for the STM32, I will be able to.</br>
+            <div>
+                <img src="Team/progress/img/zwill_stm32_st_link.jpg"></img>
+            </div>
+            <b>New ST-Link from Joe</b><br><br>
+
+            <b>Worked on A5-Component Analysis</b><br>
+            This week I worked on the component analysis comparing the STM32F091 and ESP32 WROOM 32 Microcontrollers for the use in our final project. Based on the specs that I found, both the stm32 and esp32 microcontrollers fulfill our minimum requirements, however, in order to have the flexibility to add in our stretch goals or make any necessary changes that we discover later, I decided that the STM32 microcontroller is a better fit for our project. This will also provide us with some familiarity since we have all developed on this microcontroller before during ECE 362.</br>
+            <br>
+
+            <b>Prototyped LCD Screen and Button Input</b><br>
+            After talking with another teammate, we decided to use the ESP32 for our prototyping using MicroPython and so I used a tutorial(https://www.youtube.com/watch?v=3BN26qTTusk) that I found to use an ILI9341 driver library to set up the LCD Screen. After I got the initial LCD screen tutorial working, I took the code and altered it to print a title along with a list of games. I then added two button inputs to allow me to scroll up and down on the list highlighting the selected game.</br>
+            <div>
+                <img src="Team/progress/img/zwill_lcd_and_buttons.jpg"></img>
+            </div>
+            <b>LCD and Buttons Displaying List of games</b><br><br>
+
+            <h4>Week 3:</h4>
+            <b>Date:</b> 1/27/2023 <br>
+            <b>Total hours:</b> 8<br>
+            <b>Description of project design efforts:</b><br>
+            This week was focused heavily on writing software that can be used for testing and future use and prototyping the electronics to be used in the final project.</br>
+            <br>
+            <b>Created Fixture File Generator and Generated Fixture Files for Card Shuffling Algo</b><br>
+            This week I wrote up a python program that will generate a random set of cards in random locations. The code takes in a filename and number of cards to be specified and writes the card rank, suit, and location that it should be placed separated by commas into a text file separated where each card is separated by a semicolon. This tool and the subsequent files that it produces can be used to test our card shuffling algorithm prior to implementing this feature into the whole project. During this, I talked with Brian some about the issue of specifying position with one character which could be a problem later on when we are dealing with the serial communication. This is an issue that we will have to address soon in order to use consistent formatting throughout the project.</br>
+            <div>
+                <img src="Team/progress/img/zwill_fixture_file.jpg"></img>
+            </div>
+            <b>Fixture File for Deck Order</b><br><br>
+            <br>
+            <b>Wrote Initial Card Shuffling Algo</b><br>
+            Using the fixture files, I began writing the algorithm that takes in a set of cards and positions in order to generate the output deck order. This is currently only being used when some amount of cards are specifically defined with a location in the final deck, but is not set up to handle certain games or win conditions yet. This code will continue to be developed into the future and will be used on the raspberry pi to calculate what the final deck should look like after receiving the instructions on where some cards will go in the deck.</br>
+            <br>
+            <b>Worked on Setting up the SPI TFT for use with the STM32F091</b><br>
+            This week I attempted to set up the SPI TFT to be able to display shapes and sentences on the display using the STM32 microprocessor. I tried several different methods of controlling the LCD display including trying to use the code that I have from previous classes, following a tutorial online, and I recently found a library online that might be able to help with this software. I have not been able to get this to work quite yet, but I think I am getting closer to figuring out how to do this. I plan to have this done before next lab to be able to show the progress.</br>
+            <br>
+            <b>TODO</b><br>
+            - Continue to develop card shuffling algo</br><br>
+            - Finish setting up LCD screen so we can begin determining and writing code for what will be displayed on the screen during operation</br>
+        </div>
+            
+            <h4>Weeks 1-2:</h4>
+            <b>Date:</b> 1/19/2023<br>
+            <b>Total hours:</b> 18<br>
+            <b>Description of project design efforts:</b><br>
+            These past 2 weeks have mostly been focused on getting set up and on track for the semester, I have been working on some of the necessary documentation and some organizational work such as setting up an Agile Board for the team to use. I also took some time to set up some devboards to start testing and development on.</br>
+            <br>
+            <b>Final Project Proposal</b><br>
+            Last week I worked on the final project proposal completing my personal part of the roles and responsibilities, the homework assignment responsibilities section and part of the estimated budget along with the whole description of our estimated budget.</br>
+            <br>
+            <b>Initial 3D Model for Card Holder</b><br>
+            After discussing with the rest of the team what we wanted the method of holding the cards to look like, we landed on a horizontally sitting drum with slots for each card. I then made an initial 3D model of this in Fusion 360 with the help of my roommate who has more experience than me in 3D modeling. The initial design is shown below:</br>
+            <div>
+                <img src="Team/progress/img/zwill_initial_card_holder.jpg"></img>
+            </div>
+            <b>3D Model for card holder based on initial design</b><br><br>
+            <b>Created Jira Workspace</b><br>
+            I created a JIRA workspace to allow for the organization of our tasks into several Epics and have a board to track what we should be doing and what has been done already. I created several tasks on the timeline for us to work on for the second week and will continue to update this so that the development process goes smoothly.</br>
+            <div>
+                <img src="Team/progress/img/zwill_jira_workspace.jpg"></img>
+            </div>
+            <b>Jira Workspace for the Team</b><br><br>
+            <b>Created new 3D Model for Card Holder</b><br>
+            After Dan did some research into methods used by other card shufflers, we talked again about what mechanical design would be best for our project and we landed on a design in which there are two sides with 52 separated slots. These two sides will act as ends that sandwich the cards between them in the slots. I 3D modeled this new design in order to visualize this and get it 3D printed as soon as we can.</br>
+            <div>
+                <img src="Team/progress/img/zwill_new_card_holder.jpg"></img>
+            </div>
+            <b>3D Model for card holder based on new design</b><br><br>
+            I then emailed ee.advanced.manufacturing@gmail.com to get my stl file printed and this will hopefully be printed sometime around tuesday next week so we can begin using these to test the stepper motor rotation.</br>
+            <br>
+            <b>Drew up Rough Program Flow Diagram</b><br>
+            I took some time to draw up a diagram of what I imagine the flow of the whole project. Based on this flow, the team was able to make some plans on the development and get a more in depth idea of what both the software will be like. Because of this, we were able to determine what types of peripherals we will need to have access to on our microprocessor.</br>
+            <div>
+                <img src="Team/progress/img/zwill_program_flow_diagram.jpg"></img>
+            </div>
+            <b>Program Flow Diagram</b><br><br>
+            <div>
+                <img src="Team/progress/img/zwill_peripherals.jpg"></img>
+            </div>
+            <b>Peripherals we plan to use for the project</b><br><br>
+            <b>Set up STM32 Cube IDE</b><br>
+            I also set up the STM32 Cube IDE for development of the embedded software for the STM32F091 processor that we determined will fit all of our constraints that need to be met for our project. I wrote some very basic blocks of code to hold our initialization and testing code for the interfaces that we will be using. This will be used in the future once we have prototyped the code and wiring for the peripherals using an Adafruit Feather V2. By doing this, we will not have to work out of several different repositories but instead be able to implement each peripheral separately in C prior to us integrating them all together into the final project.</br>
+            <br>
+            <b>Worked on A-2 Functional Specification</b><br>
+            Lastly, I completed the expected usage case section of the functional specification document.</br>
+            <br>
+	
+		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
+		<div id="footer"></div>
+    </div>
+</div>
+
+<!--JS-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.1.1.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#header").load("header.html");
+	$("#menu").load("navbar.html");
+	$("#footer").load("footer.html");
+});
+</script>
+</body>
+</html>

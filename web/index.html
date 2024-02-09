@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Name: Boilerplate
+Version: v1.3
+Last Updated: 4/24/2013
+Author: George Hadley
+License: Released for free under a Creative Commons Attribution 2.5 License
+
+This website was based upon a number of source materials, which are elaborated upon in credits.txt
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--Reconfigurable base tag; used to modify the site root location for root-relative links-->
+<!-- Python SimpleHTTPServer Testing -->
+<!--<base href="/http://localhost:8000/" />-->
+<!-- ECE477 preview URL -->
+<!--<base href="/https://engineering.purdue.edu/ece477/preview/" />-->
+<!-- ECE477 final URL -->
+<!--<base href="/https://engineering.purdue.edu/ece477/" />-->
+<!--<base href="https://engineering.purdue.edu/ece477/StudentWebTemplate/" />-->
+    <base href="https://engineering.purdue.edu/477grp3/" /> <!-- Replace the N with your team number-->
+	
+<!--Content-->
+<title>ECE477 Homepage</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="George Hadley">
+<meta name = "format-detection" content = "telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!--CSS-->
+<link rel="stylesheet" href="css/default.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/content.css">
+<!--[if IE 6]>
+<link href="/default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+</head>
+<body>
+<div id="wrapper_site">
+    <div id="wrapper_page">
+		<!-- Instantiate global site header.-->
+		<div id="header"></div>
+		<!-- Instantiate site global navigation bar.-->
+		<div id="menu"></div>
+		<!-- Instantiate slideshow module. All slideshow images should be 1100px x 500px and stored in ./img/slideshow-->
+		<div id="slideshow"></div>
+		<!-- Instantiate main page content. All page content should be added to about.html -->
+		<div id="content">
+            <h2>Project Name: Rigged Card Shuffler</h2>
+			
+            <h2>Project Description:</h2>
+			Card games using a traditional 52 card playing deck remain incredibly popular today and are often played with friends, family, or even competitively. While they are very fun and provide a great source of entertainment, nearly every card game involves luck-based drawing or dealing. This can become a source of frustration and detract from the entertainment value of these card games. Components of these games that may be described as luck-based can be eliminated if a player can perform controlled shuffles that result in the exact order of cards as desired. Therefore, a device that can perform such controlled shuffles would be incredibly useful in restoring the entertainment value of such games.
+			<br><br>
+			Our “Rigged” Shuffler is a device that allows a user to insert a 52-card deck of standard print size Bicycle brand playing cards and then provide user inputs via the on-board user interface (a set of directional buttons and an LCD screen). Then, depending on user inputs, the “Rigged” Shuffler will either output cards in a random order or in a controlled order as specified by the user. Potential user inputs will include options like where cards are in the resulting deal or which player is meant to win. Cards will be separated, reordered, and expelled in the desired order by a series of motors controlled by a STM32F091RCT6 microcontroller. Cards will be identified by an on-board Raspberry Pi by scanning cards with a camera, performing a computer vision identification process for each card, and then determining the ideal deal order according to the user's inputs. This process will be made as seamless as possible by a UART communication bus between the STM32F091RCT6 microcontroller and the Raspberry Pi.<br><br>
+
+			The device will be powered using 120V wall power, via a 12V power supply. A step-down voltage regulator and an LDO regulator will then be used to separate the supplied voltages into three separate voltages (12V, 5V, and 3.3V). The Raspberry Pi requires 5V while the STM32F091RCT6 microcontroller requires 3-3.3V. The stepper motors and DC motors will use 12V. 
+			<br><br>
+			<b>Stretch Goals:</b><br>
+			<ol>
+				<li>Stretch Goal #1 (Software): An ability to host a web server on the Raspberry Pi that, when connected to via WiFi, provides a web interface for the user to input desired settings and control the device.</li>
+				<li>Stretch Goal #2 (Software): An ability to recognize when a previous image recognition was performed incorrectly and error correct by altering the output order accordingly.</li>
+				<li>Stretch Goal #3 (Software): An ability to perform generalized card recognition, i.e. recognize cards other than standard size print Bicycle playing cards.</li>
+				<!--<li>Stretch Goal #4 (Software): An ability to recognize when a card separation from the inserted deck is not performed correctly (e.g. a jam or multiple separated cards) and visually indicate as such to the user via the onboard interface, and additionally the ability to attempt to correct for an erroneous card separation via a controlled reversal of the card separation motors.</li>-->
+			</ol>
+            
+            <h2>Project Specific Success Criteria (PSSCs):</h2>
+                <ol>
+                    <li>PSSC #1 (Hardware): An ability for a microcontroller to operate multiple DC motors connected to a high-friction roller to consistently take only the bottom card off a deck with an error-free rate of at least 90%.</li>
+                    <li>PSSC #2 (Hardware): An ability for a microcontroller and the Raspberry Pi to communicate via a UART transmission line.</li>
+                    <li>PSSC #3 (Hardware): An ability for a microcontroller to control a stepper motor to precisely rotate the shuffling wheel.</li>
+					<li>PSSC #4 (Hardware): An ability for a microcontroller to control an LCD screen via SPI to display device status and user inputs.</li>
+                    <!--<li>PSSC #4 (Software): An ability to calculate a valid dealing order based on user inputted constraints such as game type, the number of players, and the players that are meant to win (if any).</li>-->
+                    <li>PSSC #5 (Software): An ability for the Raspberry Pi to determine the rank and suit of individual cards with an accuracy of 75% or higher by taking a picture of it and processing the image.</li>
+					<!--<li>PSSC #7 (Hardware): An ability to detect proper alignment of the shuffling wheel such that the bins are properly flush with the separation mechanism via an emitter and receiver.</li>-->
+                </ol>
+        </div>
+		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
+		<div id="footer"></div>
+	</div>
+</div>
+
+<!--JS-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.1.1.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#header").load("header.html");
+	$("#menu").load("navbar.html");
+	$("#slideshow").load("slideshow.html");
+	//$("#content").load("about.html");
+	$("#footer").load("footer.html");
+});
+</script>
+
+</body>
+</html>

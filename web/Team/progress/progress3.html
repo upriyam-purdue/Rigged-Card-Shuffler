@@ -1,0 +1,984 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+This is an example weekly progress report document that team members can use to report their individual progress 
+of their ECE477 senior design projects. Weekly progress reports are expected to follow the general guidelines
+presented in the "Progress Report Policy" document, posted on Brightspace.  
+
+Please create 4 copies of this example, renaming each copy to <PurdueID>.html, where <PurdueID> corresponds to
+the Purdue ITAP Career Account ID given by Purdue to each individual team member. If you have any questions,
+contact course staff.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <!--Reconfigurable base tag; used to modify the site root location for root-relative links-->
+    <!--<base href="https://engineering.purdue.edu/ece477/StudentWebTemplate/" />-->
+    <base href="https://engineering.purdue.edu/477grp3/"/> <!-- Replace the N with your team number-->
+
+    <!--Content-->
+    <title>ECE477 Course Documents</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="author" content="George Hadley">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/default.css" type="text/css" media="all"/>
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/content.css">
+    <!--[if IE 6]>
+    <link href="default_ie6.css" rel="stylesheet" type="text/css"/>
+    <![endif]-->
+
+</head>
+<body>
+<div id="wrapper_site">
+    <div id="wrapper_page">
+        <!-- Instantiate global site header.-->
+        <div id="header"></div>
+        <!-- Instantiate site global navigation bar.-->
+        <div id="menu"></div>
+
+        <!-- Instantiate a page banner image. Page banner images should be 1100x350px and should be located within the local
+            img folder located at this directory level. -->
+        <div id="banner">
+            <img src="Files/img/BannerImgExample.jpg"></img>
+        </div>
+
+        <!-- Instantiate "tools" needed for a page. Tools are premade functional blocks that can be used to build a page,
+            and include things such as a file lister (for listing out homework assignments or tutorials)
+        -->
+        <div id="content">
+            <h2>Progress Report for Utkarsh Priyam</h2>
+
+            <p>
+                <b>Jump to Week:</b>
+                <a href="Team/progress/progress3.html#week-2">1-2</a>
+                <a href="Team/progress/progress3.html#week-3">3</a>
+                <a href="Team/progress/progress3.html#week-4">4</a>
+                <a href="Team/progress/progress3.html#week-5">5</a>
+                <a href="Team/progress/progress3.html#week-6">6</a>
+                <a href="Team/progress/progress3.html#week-7">7</a>
+                <a href="Team/progress/progress3.html#week-9">8-9</a>
+                <a href="Team/progress/progress3.html#week-10">10</a>
+                <a href="Team/progress/progress3.html#week-11">11</a>
+                <a href="Team/progress/progress3.html#week-12">12</a>
+                <a href="Team/progress/progress3.html#week-13">13</a>
+                <a href="Team/progress/progress3.html#week-14">14</a>
+            </p>
+
+            <h4><a id="week-14">Week 14:</a> <small><small>(<a
+                    href="Team/progress/progress3.html#week-14">link</a>)</small></small></h4>
+            <b>Date:</b> April 21, 2023<br>
+            <b>Total hours:</b> 40 hours<br>
+            <b>Description of project design efforts:</b><br>
+            During this final week, we worked on completing the Senior Design Report (A13), as well as finishing our
+            entire project for final submission.
+            <br>
+
+            <br><b>(A13) Senior Design Report [Draft]</b><br>
+            For this report, we collected all of the necessary information with respect to product context, influencing
+            factors, long-term impacts, etc. to fill in the various reflections for the report. Likewise, we completed
+            the individual reflections based on our contributions to the project and our understanding of related
+            consequences of developing our product.
+            <br>
+
+            <br><b>Project Completion</b><br>
+            The overwhelming majority of my time this week went into finishing our project for submission. I worked on
+            various parts of the project, including a few contributions to the mechanical design and arrangement, but
+            most of my work effort went into the rest of software design and integration.
+            <br>
+            For mechanical design, I assisted Zach and Brian with various discussions on aligning components, as well as
+            finalizing solutions for issues like positioning our picture illumination LED and RasPi camera module. We
+            unfortunately suffered various component breakdowns and failures (such as our 12V to 5V regulator and
+            various motor mounts), which we tried to repair as much as we could, but for some we were unable to replace
+            the parts before our submission demo.
+            <br>
+            On the software front, first I completed the testing and integration of the computer vision module, and my
+            tests on a miniaturized "real world" data set indicated that my model was capable of achieving 100% accuracy
+            with clean ground truth images and manual parameter tuning. These curated ground truth images and their
+            processed intermediates are depicted below. Unfortunately, during demonstration we were rushed for time and
+            therefore unable to build a curated dataset and hand-tune the final model parameters, which resulted in our
+            demonstrated CV performance failing to meet the original target accuracy of 75%.
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk14/test-samples/AS-raw.png" alt="A of S Test Image" width="212"/>
+                <img src="Team/progress/img/utk/wk14/test-samples/AH-raw.png" alt="A of H Test Image" width="212"/>
+                <img src="Team/progress/img/utk/wk14/test-samples/AD-raw.png" alt="A of D Test Image" width="212"/>
+                <img src="Team/progress/img/utk/wk14/test-samples/AC-raw.png" alt="A of C Test Image" width="212"/>
+                <br>
+                <img src="Team/progress/img/utk/wk14/test-samples/AS-bbox.png" alt="A of S Processed Img" width="212"/>
+                <img src="Team/progress/img/utk/wk14/test-samples/AH-bbox.png" alt="A of H Processed Img" width="212"/>
+                <img src="Team/progress/img/utk/wk14/test-samples/AD-bbox.png" alt="A of D Processed Img" width="212"/>
+                <img src="Team/progress/img/utk/wk14/test-samples/AC-bbox.png" alt="A of C Processed Img" width="212"/>
+            </center>
+            <br>
+            I also worked extensively on completing integration of our various modules and facilitating proper
+            communication channels between the various bits of code. These efforts took the form of our UART management
+            module and our core execution logic loops. Additionally, I developed helper utility classes to assist with
+            card order specification computations on a game-by-game basis, as well as for spinning up a self-hosted
+            webserver as an alternate method of game configuration specification rather than the on-device UI. The
+            following images depict the semi-final code for RasPi UART, RasPi core logic, µC UART, and µC core logic,
+            respectively. (Click the buttons to show the respective code.)
+            <br>
+            <script type="text/javascript">
+                function _wk14_set_style(id, disp_style) {
+                    for (const el of document.getElementsByClassName(id))
+                        el.style.display = disp_style;
+                }
+
+                function wk14_show_content(id) {
+                    _wk14_set_style('w14i1', 'none');
+                    _wk14_set_style('w14i2', 'none');
+                    _wk14_set_style('w14i3', 'none');
+                    _wk14_set_style('w14i4', 'none');
+                    if (id) _wk14_set_style(id, 'inline');
+                }
+            </script>
+            <br>
+            <center>
+                <button onclick="wk14_show_content('w14i1')">RasPi UART code</button>
+                &nbsp;
+                <button onclick="wk14_show_content('w14i2')">RasPi core logic code</button>
+                &nbsp;
+                <button onclick="wk14_show_content('w14i3')">µC UART code</button>
+                &nbsp;
+                <button onclick="wk14_show_content('w14i4')">µC core logic code</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button onclick="wk14_show_content('w14iall')"><em>Show All</em></button>
+                &nbsp;
+                <button onclick="wk14_show_content(undefined)"><em>Hide All</em></button>
+                <br>
+                <br class="w14i1 w14iall" style="display: none;">
+                <img class="w14i1 w14iall" style="display: none;" src="Team/progress/img/utk/wk14/sbc-uart.png"
+                     alt="RasPi UART code" width="850"/>
+                <br class="w14i2 w14iall" style="display: none;">
+                <img class="w14i2 w14iall" style="display: none;" src="Team/progress/img/utk/wk14/sbc-exec.png"
+                     alt="RasPi core logic code" width="850"/>
+                <br class="w14i3 w14iall" style="display: none;">
+                <img class="w14i3 w14iall" style="display: none;" src="Team/progress/img/utk/wk14/mcu-exec-1.png"
+                     alt="µC UART code" width="850"/>
+                <br class="w14i4 w14iall" style="display: none;">
+                <img class="w14i4 w14iall" style="display: none;" src="Team/progress/img/utk/wk14/mcu-exec-2.png"
+                     alt="µC core logic code" width="850"/>
+            </center>
+            <br>
+            Of the depicted code, the UART modules handle packing and unpacking the various UART message packets into
+            interpretable control signals and processing directives. The core logic loops are responsible for almost
+            everything else: directing program flow, handshaking and exchanging information between the RasPi and µC,
+            and completing one full shuffle execution (from configuration to card output). During the demo, we were able
+            to show the majority of this functionality, excluding the actual card shuffling and output as the motor
+            mounts had 3D printed unfortunately melted due to heat issues right before our scheduled demo time.
+            <br>
+
+            <br>
+
+            <h4><a id="week-13">Week 13:</a> <small><small>(<a
+                    href="Team/progress/progress3.html#week-13">link</a>)</small></small></h4>
+            <b>Date:</b> April 14, 2023<br>
+            <b>Total hours:</b> 25 hours<br>
+            <b>Description of project design efforts:</b><br>
+            This week I worked on a lot of different tasks, all geared towards getting our preliminary PSSC check-offs
+            completed and transitioning towards completing our entire project before the deadline at the end of next
+            week. In particular, I did the majority of my work on integrating the PCB with various hardware components
+            and completing the software necessary to demo the functionality of those components in the context of our
+            product. I also completed some software specifications necessary to finalize the handshake and data-exchange
+            process between our microcontroller and Raspberry Pi.
+            <br>
+
+            <br><b>PCB Fixes</b><br>
+            First and foremost, I did a lot of iterative work on our PCB this week. Throughout the prototyping process,
+            we kept encountering issues with our PCB that restricted our ability to test and verify various subsystems
+            and components. In the end, I had to redress the issues by resoldering various components. The final tally
+            for resoldering this week reached a total of 9, covering the following components and sections on our PCB:
+            <ul>
+                <li>Reducing the resistance on the pull-down resistor for our microcontroller's boot/programming pin
+                </li>
+                <li>Removing a (vestigial) power management Schottky diode due to excessive voltage loss on our 3.3V
+                    line
+                </li>
+                <li>Increasing voltage divider resistances for our stepper motor drivers to eliminate a short-circuit
+                </li>
+                <li>Remounting various surface-mount resistors and capacitors due to loose/faulty connections</li>
+                <li>Re-soldering various through-hold components that were loose or improperly soldered</li>
+            </ul>
+
+            <br><b>Hardware Prototyping & PSSC Check-offs</b><br>
+            This week, we got our PSSCs #2, #3, and #4 preliminarily checked off. These three check-offs relate to the
+            functionality of UART, stepper motors (for our card bin), and SPI (for our LCD screen), respectively. For
+            these tasks, I worked on integrating various parts of old code we had from early product prototyping,
+            including merging the various code files into our project code base and propagating updates to
+            microcontroller pins and timer settings across the various related components. My contributions here are
+            especially visible vis-à-vis the DC motor functionality, heartbeat LED, miscellaneous code
+            cleanup/refactoring, and multiple parts of the debugging process as we initially sought to get our PCB
+            programmed and running. However, I also played important roles as a secondary pair of eyes, datasheet
+            verifier, and sanity checker for the UART and stepper motor implementations as well. This worked culminated
+            in our successful check-offs of the three aforementioned PSSCs, of which the stepper motor control and the
+            (unmentioned, PSSC #1) DC motor control are depicted in the videos below.
+            <br>
+            <center>
+                <video width="400" height="711" controls>
+                    <source src="Team/progress/img/utk/wk13/stepper-motor-control.mp4" type="video/mp4"/>
+                </video>
+                <video width="400" height="711" controls>
+                    <source src="Team/progress/img/utk/wk13/dc-motor-control.mp4" type="video/mp4"/>
+                </video>
+            </center>
+
+            <br><b>Software Specifications</b><br>
+            Finally, on the micro/RPi software front, I worked on developing specifications for the precise formatting
+            and data structure of packets used to exchange information between our microcontroller and Raspberry Pi. The
+            result is a 5-page specifications document (in the style of the STM32F reference document) that anyone on
+            our team can use to implement the data exchange protocol for our product.
+            <br>
+
+            <br>
+
+            <h4><a id="week-12">Week 12:</a> <small><small>(<a
+                    href="Team/progress/progress3.html#week-12">link</a>)</small></small></h4>
+            <b>Date:</b> April 7, 2023<br>
+            <b>Total hours:</b> 11 hours<br>
+            <b>Description of project design efforts:</b><br>
+            This week, I worked on my individual assignment (A10) Reliability and Safety Analysis. I also worked on some
+            product assembly and final PCB verification. Lastly, I worked on improving the card recognition module with
+            feedback received on last week's progress.
+            <br>
+
+            <br><b>(A10) Reliability and Safety Analysis</b><br>
+            Using official documentation and guidelines from the military handbook on "reliability prediction of
+            electronic equipment" (MIL-HDBK-217F), I computed failure statistics for the most vulnerable components in
+            our design. I also identified and causes and effects for the most likely or plausible modes of failure for
+            each significant subsystem within our electrical design, and I documented methods for identifying and
+            potentially resolving such failure states in a FMECA (Failure Modes, Effects, and Criticality Analysis)
+            worksheet.
+            <br>
+
+            <br><b>Product Assembly and Final PCB Verification</b><br>
+            I worked with Zach and Brian to test out certain aspects of product assembly, including measuring tolerances
+            for various mechanical components and constructing mounts required to conjoin distinct parts. I also worked
+            on final PCB verification with Dan and Brian, checking that various parts of the PCB work as expected. This
+            included checking that the power works as expected, for all 3 voltages; ensuring various components, such as
+            the power indicator LED and the microcontroller, are powered; and checking power/energy dissipation over
+            time across the board. I also checked that various off-board components, especially the Raspberry Pi, are
+            powered correctly. Regarding the RasPi, our purchased USB power cable failed to deliver power consistently,
+            so we resolved the issue by scavenging an alternate from the shared electronics bin. Also, we discovered a
+            few soldering issues on the stepper motor drivers that were resulting in shorts, unsoldered pins, and
+            excessive heat accumulation, so I took the chance to resolder both of those chips as well. The final PCB is
+            pictured below.
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk12/pcb-full-final.jpg" alt="PCB ready for product packaging"
+                     width="850"/>
+            </center>
+            <br>
+
+            <br><b>Improved Card Recognition</b><br>
+            After last week's update, I received the suggestion to look into <a
+                href="https://en.wikipedia.org/wiki/Mathematical_morphology">morphological operators</a> (more
+            specifically, a <a href="https://en.wikipedia.org/wiki/Dilation_(morphology)">dilation morphology</a>) as
+            they could be applied to thicken the significant details of the input images and thus improve the edge
+            detection process. Additionally, to improve element matching down the line, I could use a pretrained ResNet
+            [<a href="https://en.wikipedia.org/wiki/Residual_neural_network">1</a>, <a
+                href="https://arxiv.org/abs/1512.03385">2</a>] model to extract a feature set encoding of the key
+            text/character elements and use those encodings to more easily match image elements.
+            <br>
+            Depending on the eventual efficacy of my current matching approach, I may implement the latter suggestion to
+            improve overall accuracy. For now, I went with just the first suggestion, and, combined with a sharper
+            filter threshold for denoising, the increased element thickness as a result of these changes resulted in
+            more accurate edge detection and bounding box generation. The results of these changes on the various steps
+            of the current algorithm implementation are depicted below, for the same samples tested last week (albeit,
+            slightly altered for visual purposes).
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk12/test1-inter.png" alt="Real-world Test 1 (J of Dia)" width="850"/>
+                <br>
+                <img src="Team/progress/img/utk/wk12/test2-inter.png" alt="Real-world Test 2 (2 of Clu)" width="850"/>
+            </center>
+            <br>
+            Also, note that bottom part of the 2 in the second set of images is missing. This is a result of the images
+            blowing out due to excessive sensor illumination, which I mentioned in the last week's update. THe
+            information missing altogether in the original test image, so the algorithm cannot detect it. Once the final
+            assembly is complete (presumably some time this week), I will be finalizing the solution to this last
+            remaining problem, and then the improved recognition algorithm should be able to identify the key textual
+            elements in their entirety.
+            <br>
+
+            <br>
+
+            <h4><a id="week-11">Week 11:</a> <small><small>(<a
+                    href="Team/progress/progress3.html#week-11">link</a>)</small></small></h4>
+            <b>Date:</b> March 31, 2023<br>
+            <b>Total hours:</b> 8 hours<br>
+            <b>Description of project design efforts:</b><br>
+            This week, I finished the PCB soldering tasks with Dan. I also worked a bit on the card recognition software
+            based off the "real-world" images I captured last week.
+            <br>
+
+            <br><b>PCB Completion</b><br>
+            Dan and I tackled all of the surface mount resistors and capacitors, as well as through-hole components and
+            the surface-mount quad flatpack microcontroller during the first half of the week. After finishing these
+            components, we had to wait for a few other parts (namely the stepper motor drivers and the DC motor control
+            BJTs) to arrive prior to final assembly of the PCB. We finished the remainder of the soldering in the latter
+            half of the week, but I unfortunately forgot to capture an image of the PCB after final completion. Instead,
+            an image of the PCB mid-way through the week is shown below.
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk11/pcb-full-solder.jpg" alt="PCB mid-way soldered" width="850"/>
+            </center>
+            <br>
+
+            <br><b>Card Recognition Updates</b><br>
+            As mentioned last week, there are certain issues with the images I captured last week, with respect to how
+            closely they emulate the expected environment within the final product package. However, I can still make
+            use of them to make some judgment of the models and make changes. During my analysis this week, as I had
+            predicted the blown out images made image matching challenging. Despite various tweaks to the model, I was
+            not able to capture the entire card identity from those images. However, the best performing model was able
+            to make sizable progress by identifying the shape corresponding to the suit of the card, as well as identify
+            certain parts of the number, such as corners. These results are shown below, with the top two images
+            depicting the model output and the bottom two indicating in slightly more detail where the targeted card
+            identity elements actually lie on the depicted card.
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk11/test1-out.png" alt="Real-world Test 1 (J of Dia)" height="500"/>
+                <img src="Team/progress/img/utk/wk11/test2-out.png" alt="Real-world Test 2 (2 of Clu)" height="500"/>
+                <br>
+                <img src="Team/progress/img/utk/wk11/test1-aug.png" alt="Real-world Test 1 (J of Dia)" height="500"/>
+                <img src="Team/progress/img/utk/wk11/test2-aug.png" alt="Real-world Test 2 (2 of Clu)" height="500"/>
+            </center>
+            <br>
+            Although not perfect for these images, with the changes and acknowledgements (vis-à-vis lighting and
+            component layout) mentioned last week, the current model should be able to completely identify the cards. To
+            confirm this conjecture, I will capture better test images this coming week, as our mechanical/packaging
+            work is now complete, and we are ready to begin preliminary assembly, thanks to work from Zach and Brian.
+            <br>
+
+            <br>
+
+            <h4><a id="week-10">Week 10 (& Spring Break):</a> <small><small>(<a
+                    href="Team/progress/progress3.html#week-10">link</a>)</small></small></h4>
+            <b>Date:</b> March 24, 2023<br>
+            <b>Total hours:</b> 10 hours<br>
+            <b>Description of project design efforts:</b><br>
+            This week, I mostly worked on practicing for PCB soldering and verifying the PCB production quality. I also
+            took some time to grab a few pictures for preliminary "real-world" tests of the card identification system,
+            but I have not yet had a chance to test the algorithm on those results.
+            <br>
+
+            <br><b>PCB Stuff</b><br>
+            This week, I worked on verifying the PCB that arrived. I tested all the individual connections as well as
+            the separation of ground/power/data lines. I also checked to make sure the traces had no visual defects or
+            disconnects, and I ensured that the solder pads, through-holes, and IC pads were properly shaped, sized, and
+            spaced for our purposes.
+            <br>
+            I also spent time learning and practicing soldering, as prior to this week I had never soldered any
+            components. In particular, I practiced surface-mount soldering with the QFP chips, and a sample result of
+            that practice is depicted below.
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk10/qfp-solder.jpg" alt="QFP Surface-mount Solder" height="300"/>
+            </center>
+            <br>
+
+            <br><b>"Real-world" Card Identification Testing</b><br>
+            For the real-world-equivalent testing, I set up a temporary test rig that mirrors how our camera and light
+            would be set up in practice. I captured a few images of cards for evaluation, and I noticed a few potential
+            issues. First, due to the minimum focal distance of the camera, the camera must be a few inches away from
+            the card, which is an important design consideration vis-à-vis component layout. Furthermore, the light from
+            the LED tends to blow out the captured image, partially due to intrinsic reflectivity of the coating on the
+            cards and partially due to bleeding illumination directly into the camera sensor. These observations are
+            exemplified in the following images:
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk10/test-pic-1.jpg" alt="Real-world Test 1 (J of Dia)" height="500"/>
+                <img src="Team/progress/img/utk/wk10/test-pic-2.jpg" alt="Real-world Test 2 (2 of Clu)" height="500"/>
+            </center>
+            <br>
+            I will have to create another rig soon, as the current one does not entirely reflect all of the possible
+            parameters I could consider (such as lighting angle, camera angle, light diffusion, etc). However, the
+            current results already indicate that some more thought is needed on the specific details regarding the
+            internal illumination.
+            <br>
+
+            <br>
+
+            <h4><a id="week-9">Weeks 8-9:</a> <small><small>(<a
+                    href="Team/progress/progress3.html#week-9">link</a>)</small></small></h4>
+            <b>Date:</b> March 10, 2023<br>
+            <b>Total hours:</b> 15 hours<br>
+            <b>Description of project design efforts:</b><br>
+            This week I worked on midterm review preparation (esp. prototyping, verification, slides, and content), as
+            well as continued work on the denoising and card recognition logic.
+            <br>
+
+            <br><b>Midterm Review Presentation Preparations</b><br>
+            I worked a bit on prototyping and verifying certain parts and steps required for the presentation, such as
+            looking over the PCB diagram/electrical schematic for omissions and/or errors. I also prepared parts of the
+            slides, with respect to both content and style/design, covering many aspects of the project.
+            <br>
+
+            <br><b>Denoising and Card Identification</b><br>
+            For denoising, I further implemented random noise filters to our logic, which help to reduce <a
+                href="https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables">i.i.d.</a>
+            noise typically associated with non-environmental sources such as hardware/sensor issues. The other primary
+            source of noise (environmental noise) relates to issues in set-up such as poor lighting, object occlusion,
+            etc., and they can only be truly accounted for and remedied once our physical prototype is assembled. A
+            demonstration of i.i.d. noise filtering is depicted below, with the input, noisy input, and output images
+            labeled and depicted alongside the applied noise distortion. For reference, the noise was applied with a
+            strength of around 15%, which far exceeds any noise we expect to see during actual operation. As a result,
+            this test representatively indicates the viability of our current i.i.d. noise filtering set-up. However, as
+            can be observed in the image, the noise filter can still be improved to provide better resolution of the
+            card edges (which play an important role in the card comparison/identification procedure).
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk9/noisy-detection.png" alt="Noisy Image Recognition" width="850"/>
+            </center>
+            <br>
+            In terms of card identification, I tackled the generation of a set of ground truth images for preliminary
+            testing. Unfortunately, these will not be usable in the final product as that depends on the physical layout
+            of components including the camera and card loader. However, going through the process highlighted potential
+            issues and optimizations that I can fix/exploit to improve the speed of this process for the final product.
+            Additionally, I worked a bit more on the overall card difference scoring function mentioned in my last
+            report, as my old implementation had many unexpected bugs. I am still in the process of repairing the
+            function for another test.
+            <br>
+
+            <br>
+
+            <h4><a id="week-7">Week 7:</a> <small><small>(<a
+                    href="Team/progress/progress3.html#week-7">link</a>)</small></small></h4>
+            <b>Date:</b> February 24, 2023<br>
+            <b>Total hours:</b> 8 hours<br>
+            <b>Description of project design efforts:</b><br>
+            This week, I worked on preparing for the midterm review presentation. I also worked on continuing
+            prototyping of the card identification software module.
+            <br>
+
+            <br><b>Midterm Review Presentation Preparations</b><br>
+            I worked on filling in slides and details for the presentation, as well as collecting requisite information
+            for said presentation. I also revised prior assignments (like A3 Software Overview) based on provided
+            instructor feedback and uploaded the updated versions to <a href="Files/documents.html">our team website</a>.
+            <br>
+
+            <br><b>Card Identification Prototyping</b><br>
+            Most importantly, this week I worked on continuing the prototyping/implementation process for the card
+            identification software module. At this point, only the image matching portion remained, as the
+            preprocessing and element identification portions had already been completed. This week, I implemented a
+            general image matching algorithm that operates by pairing corresponding elements and generating a comparison
+            score based on similarity. By aggregating the score over all pairs of elements in the test image vs. the
+            ground truth image, it computes a match-likelihood score between the test and truth images. The scores can
+            be compared across all truth images to identify the closest and most accurate possible identity for the
+            card. Some of the implementation/code necessary for this functionality is shown below.
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk7/card-id.png" alt="Card Identification code (functions)"
+                     width="850"/>
+            </center>
+            <br>
+            Additionally, I created a utility function <tt>_denoise_image(&lt;input image&gt;): &lt;denoised
+            image&gt;</tt> that will play a crucial role in mitigating the effects of sensor-derived, lighting-based,
+            and other forms of noise on the accuracy of card identification. At the moment, it only applies a simple
+            monochromatic filter followed by a threshold filter, but it can be modified as necessary once the hardware
+            prototype is assembled (and we get a better understanding of the noise issues we will encounter). The
+            current function implementation is shown below.
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk7/denoise.png" alt="Image Denoiser Function" width="500"/>
+            </center>
+            <br>
+            The additions this week have not yet been fully tested in their entirety. Additionally, with these last
+            additions, it is now possible to execute end-to-end tests on image identification. However, these require a
+            collection of "ground truth" images to compare the test images against, which is why I have not yet been
+            able to do so. In the coming week, I will be conducting a preliminary test using sample images. However, I
+            will also run another set of tests once the hardware is completely assembled to see how the algorithm
+            performs with the data it will use during the product's actual function.
+            <br>
+
+            <br>
+
+            <h4><a id="week-6">Week 6:</a> <small><small>(<a
+                    href="Team/progress/progress3.html#week-6">link</a>)</small></small></h4>
+            <b>Date:</b> February 17, 2023<br>
+            <b>Total hours:</b> 10 hours<br>
+            <b>Description of project design efforts:</b><br>
+            This week, I worked briefly on the Bill of Materials (A7), filling in some details for components related to
+            card recognition and shuffling (i.e. the Raspberry Pi and the Pi camera module). However, I spent most of my
+            time continuing the debugging and prototyping process for the Python software modules of this project.
+            Specifically, I finished reimplementing the card shuffling module. I also took the time to write a utility
+            script, that, while not used in the final Python production code, performs pre-computations to calculate
+            magic value constants necessary for our microcontroller's software. Finally, I finalized the precise
+            function call stacks/APIs for the various Python software modules, as they were required this week in order
+            to complete the Software Formalization document (A8).
+            <br>
+
+            <br><b><a id="wk6-func-api-call-stack">Functional APIs/Call Stacks</a></b> <small>(<a
+                href="Team/progress/progress3.html#wk6-func-api-call-stack">link</a>)</small><br>
+            Computer Vision Module:
+            <ul>
+                <li><tt>preprocess_image(&lt;image&gt;): &lt;edge-mapped image&gt;, &lt;list of bounding-box coordinates&gt;</tt>
+                    <ul>
+                        <li><tt>_filter_edges(&lt;image&gt;): &lt;edge-mapped image&gt;</tt>
+                            <ul>
+                                <li><tt>_get_edges(&lt;image&gt;): &lt;directional edge lists&gt;</tt>
+                                    <ul>
+                                        <li>Implemented with <a href="https://en.wikipedia.org/wiki/Sobel_operator">Sobel
+                                            operator</a></li>
+                                    </ul>
+                                </li>
+                                <li>Mask input image into 0-1 map based on edge lists (1 = edge, 0 = no edge)</li>
+                            </ul>
+                        </li>
+                        <li><tt>_get_bounding_boxes(&lt;edge-mapped image&gt;): &lt;list of bounding-box
+                            coordinates&gt;</tt>
+                            <ul>
+                                <li>Floodfill (implemented using <a
+                                        href="https://en.wikipedia.org/wiki/Disjoint-set_data_structure">disjoint
+                                    sets</a>) edge map to generate <a
+                                        href="https://en.wikipedia.org/wiki/Component_(graph_theory)">connected
+                                    components</a> (i.e. image's key-points)
+                                </li>
+                                <li>Compute <a href="https://en.wikipedia.org/wiki/Minimum_bounding_box">minimal
+                                    bounding box</a> for each connected component
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><tt>identify_card(&lt;edge-mapped image&gt;, &lt;list of bounding-box coordinates&gt;): &lt;card
+                    rank/suit&gt;</tt>
+                    <ul>
+                        <li><tt>_normalize_bboxes(&lt;bbox coordinates&gt;): &lt;normalized coordinates&gt;, &lt;coordinate
+                            mapper function&gt;</tt>
+                            <ul>
+                                <li>Extract largest/outermost bounding box (i.e. the "framing" box)</li>
+                                <li>Rescale outer box to have coordinates (0,0) to (1,1)</li>
+                                <li>Rescale all other bounding boxes with same scaling constants</li>
+                                <li>Define <tt>_mapper(&lt;normalized coordinates&gt;): &lt;original
+                                    coordinates&gt;</tt></li>
+                            </ul>
+                        </li>
+                        <li>Load "ground truth" edge maps, normalized bounding boxes, and coordinate mapper functions
+                        </li>
+                        <li><tt>_compare_images(&lt;test image data&gt;, &lt;ground truth image data&gt;): &lt;image
+                            similarity score&gt;</tt>
+                            <ul>
+                                <li>Match corresponding bounding boxes by normalized coordinates and areas</li>
+                                <li>Interpolate corresponding values from edge map using mapper function</li>
+                                <li>Compute error using arbitrary loss function (i.e. <a
+                                        href="https://en.wikipedia.org/wiki/Mean_squared_error">MSE</a>, <a
+                                        href="https://en.wikipedia.org/wiki/Hinge_loss">Hinge</a>, <a
+                                        href="https://en.wikipedia.org/wiki/Loss_function#0-1_loss_function">0-1</a>,
+                                    etc.)
+                                </li>
+                                <li>Aggregate score across all matched bounding boxes, penalizing for any unmatched
+                                    ground truth elements
+                                </li>
+                            </ul>
+                        </li>
+                        <li>Return card identity (i.e. rank/suit) corresponding to ground truth image with the highest
+                            similarity score
+                        </li>
+                        <li>If necessary, track previous results and warn/notify (as appropriate) if identity repeats
+                            within 52-card deck
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            Card Shuffling Module:
+            <ul>
+                <li><tt>shuffle(&lt;arbitrary list&gt;): &lt;permuted list = <a
+                        href="https://en.wikipedia.org/wiki/Permutation#Definition">&sigma;(list)</a>&gt;</tt>
+                    <ul>
+                        <li>Implemented using <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates
+                            Shuffle</a>, or an analogous algorithm
+                        </li>
+                        <li>Uses:
+                            <ul>
+                                <li>Internally as part of card-dependent shuffle order selection (i.e. permute card
+                                    identities)
+                                </li>
+                                <li>Directly as part of card-agnostic shuffler (i.e. permute sort indices directly)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><tt>compute_shuffled_deck(&lt;card position specifications&gt;): &lt;compliant shuffle
+                    order&gt;</tt>
+                    <ul>
+                        <li>Identify all cards whose positions are not specified</li>
+                        <li>Randomly shuffle unspecified cards, i.e. using <tt>shuffle(...)</tt></li>
+                        <li>Interleave shuffled deck with specified cards</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <br><b>Card Shuffling Python Module</b><br>
+            For card shuffling, I mostly worked on ironing out implementation bugs that were resulting in issues such as
+            card duplication (see <a href="Team/progress/progress3.html#week-5">previous week's report</a> for details).
+            I tackled this issue by redesigning the functional interface (see new API <a
+                href="Team/progress/progress3.html#wk6-func-api-call-stack">below</a>) and reimplementing all the new
+            functions.
+            <br>
+            The modified functions are depicted side-by-side below (left = new, right = old):
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk6/shuffle-diff.png" alt="List shuffler code" width="850"/>
+                <img src="Team/progress/img/utk/wk6/compute_shuffle-diff.png" alt="Card deck shuffler code"
+                     width="850"/>
+            </center>
+            <br>
+            Now, when run in its entirety, the output for the shuffler module looks as follows. In the image, the first
+            list represents the random shuffle of all unspecified cards, while the 5 lines in the middle are
+            specifically the five cards whose positions were specified. The final list interleaves those prior two lists
+            of cards to provide the final specification-compliant card order (N.B. positions are <a
+                href="https://en.wikipedia.org/wiki/Zero-based_numbering">0-indexed</a>).
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk6/orderer.png" alt="Card deck shuffler code" width="850"/>
+            </center>
+            <br>
+
+            <br><b>Microcontroller Pre-computation Script</b><br>
+            This pre-computation script solves one very simple problem: How many steps should our stepper motor take
+            between bins on our card wheel? The wheel has 52 slots (one for each card, of course), but the motor has a
+            1.8&#0176; step size (i.e. 200 steps in a full rotation). As a result, we cannot have a fixed step increment
+            per bin. Luckily, our motor supports any fractional step size corresponding to a power of two, up to 1/32 of
+            a step. In other words, we can make 1, 1/2, 1/4, 1/8, 1/16, or 1/32 of a step.
+            <br>
+            With the constraints, this pre-comp script aims to find a step size that balances speed (i.e. larger step
+            size) with precision (i.e. minimal error between optimal and chosen rotated position, per bin). This
+            weighing can be done manually, as this script is only used for pre-computation. As a result, the script
+            simply computes what step increment would result in the card wheel ending as close to the center of each bin
+            as possible, for every possible step size. The script then displays these step increments alongside per-bin
+            errors and relevant computed error statistics. In the near future, we will use these results to select what
+            fractional step size will be optimal for our product. The script's output is depicted below for arbitrarily
+            chosen samples of the motor's step size (1 step and 1/32 step):
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk6/bin-1to1-step-errors.png" alt="1/1 step increment errors"
+                     width="850"/>
+                <img src="Team/progress/img/utk/wk6/bin-32to1-step-errors.png" alt="1/32 step incr. errors"
+                     width="850"/>
+            </center>
+            <br>
+
+            <br>
+
+            <h4><a id="week-5">Week 5:</a> <small><small>(<a
+                    href="Team/progress/progress3.html#week-5">link</a>)</small></small></h4>
+            <b>Date:</b> February 10, 2023<br>
+            <b>Total hours:</b> 8 hours<br>
+            <b>Description of project design efforts:</b><br>
+            This week, I worked on the component analysis document (A5), some prototyping of the card shuffling code,
+            and debugging dependency issues for python libraries on our Raspberry Pi.
+            <br>
+
+            <br><b>(A5) Component Analysis Document</b><br>
+            For this document, I completed the overview section of the document outlining the key components that have
+            to be selected for our project, as well as the roles they play in the overall product. I also completed the
+            component comparison analysis for the camera that will be used by the computer vision logic for card
+            identification. For this analysis, I compared the applicability of official Raspberry Pi camera modules to
+            third party offerings, looking at a variety of the component's and our project's specification details
+            (including price, size, optical parameters, and compatibility) before eventually selecting the official
+            Raspberry Pi camera module for our product. The two modules considered are depicted below, alongside a table
+            breaking down the specific specifications compared and considered.
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk5/raspi-v2.jpeg" alt="RasPi Official Camera Module (v2)"
+                     height="300"/>
+                <img src="Team/progress/img/utk/wk5/arducam.png" alt="Arducam Mini OV2640 Camera" height="300"/>
+                <br>
+                <img src="Team/progress/img/utk/wk5/cameras.png" alt="Camera Comparison Breakdown" width="850"/>
+            </center>
+            <br>
+
+            <br><b>Prototyping Card Shuffling Logic</b><br>
+            I also worked a bit on prototyping the card shuffling/order determination logic. We already have quite a bit
+            of the implementation complete, but are currently running into weird bugs such as card duplication,
+            disappearing cards, and invalid output permutations (i.e. the output doesn't conform to the input card
+            position specifications). I spent some time tracing the algorithms and debugging, but couldn't trace the
+            issues entirely. I am currently debating whether to rework the algorithms from scratch to provide a second
+            sample to compare the algorithm accuracy against.
+            <br>
+
+            <br><b>Raspberry Pi Library Installation Issues</b><br>
+            Lastly, I spent some time working out issues in installing necessary Python library dependencies on the
+            Raspberry Pi. For some reason, many common libraries such as <a href="https://opencv.org/">OpenCV</a> and
+            <a href="https://scipy.org/">SciPy</a> (specifically ndimage). The former is currently only used to load and
+            visualize images, but may be removed in the future as it doesn't play a core role in the image recognition
+            implementation. On the other hand, the latter is vital as it provides a time-efficient <a
+                href="https://en.wikipedia.org/wiki/Sobel_operator">Sobel operator</a> that is critical to edge
+            detection. Unfortunately, both libraries were giving issues with installation, partially due to unsupported
+            OS versions (32-bit RaspbianOS) and partially due to incorrect library-Python version pairs (Python 3.7 vs
+            3.9). We found a workaround for the OpenCV installation, but the Scipy package is still problematic.
+            Luckily, it is possible to replace the SciPy package with <a
+                href="https://scikit-image.org/">scikit-image</a> instead, which also provides convenient and efficient
+            implementations of the Sobel operator. If we can't get the SciPy issue resolved, we can refactor the code in
+            the future to switch the dependency to scikit-image, which is much more likely to install without errors.
+            <br>
+
+            <br>
+
+            <h4><a id="week-4">Week 4:</a> <small><small>(<a
+                    href="Team/progress/progress3.html#week-4">link</a>)</small></small></h4>
+            <b>Date:</b> February 3, 2023<br>
+            <b>Total hours:</b> 9 hours<br>
+            <b>Description of project design efforts:</b><br>
+            This week, I completed the software overview document, iterated on design elements and decisions with my
+            teammates, and continued prototyping of the computer vision software for our card shuffler.
+            <br>
+
+            <br><b>(A3) Software Overview Document</b><br>
+            I completed the drafting and final writing process of the software overview, which includes a logical
+            breakdown of our software modules, related algorithms, and important data structures we will use. I also
+            finalized and created a flowchart and state machine diagram depicting the overall logic and control flow of
+            our card shuffling system, both of which are shown below.
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk4/a3_flowchart.png" alt="Card Shuffler Logic Flowchart" height="350"/>
+                <img src="Team/progress/img/utk/wk4/a3_fsm.png" alt="Micro FSM Diagram" height="350"
+                     style="float:right"/>
+            </center>
+            <br>
+            I also made some changes to the computer vision module's design relative to my previous progress report. The
+            details are mentioned below, and the overview document was updated appropriately to reflect the most
+            up-to-date and current design for all the software packages.
+            <br>
+
+            <br><b>Iterative Design</b><br>
+            We also changed some design aspects of our shuffler, mostly related to the card recognition and extraction
+            mechanisms. Specifically, we re-arranged the card extraction magazine to pull from the bottom of the deck.
+            More importantly, we decided to expose more surface area on the card face, so that we have the option of
+            scanning not only the top corner of the card but other parts of the face in determining the rank and suit of
+            the card. The approach also provides other benefits such as opening up the possibility of detecting and
+            potentially correcting for mechanical card extraction failures. Finally, we also discussed possibilities for
+            internal lighting within the card shuffler to reduce image capture failures and increase card recognition
+            accuracy.
+            <br>
+            I also decided to make some changes to the software design of the computer recognition. As opposed to taking
+            a consensus of the three previously outlined approaches, the system now chains the contour mapping,
+            key-point extraction, and brute force matching in that order to create a complete image-processing pipeline.
+            Now, the extracted image contours (edges) are piped to both the key-point extractor and the brute force
+            matcher. The former extracts key-points and relevant <a
+                href="https://en.wikipedia.org/wiki/Minimum_bounding_box">bounding boxes</a> from the contour data,
+            which is also piped to the latter. The latter (brute force matcher) then takes all of that computed data to
+            determine the best match among all card ranks and suits. The reason for this change comes down to how
+            certain elements of key-point identification preprocessing and brute force matching are closely related to
+            other steps taken during edge detection and de-noising. As a result, the pipeline was adjusted to make
+            better use of those similarities.
+            <br>
+            However, to compensate for the now-present lack of self-verification (which was provided via the consensus
+            approach), I did introduce one new element to the pipeline as a post-processing step. With the increased
+            visibility of the card faces and improved element and bounding box detection, it is now possible to count
+            the individual "pips" on card faces (such as 1 spade, 2 hearts, 3 clubs, etc.) and use those counts to
+            generate a secondary guess about the card's identity (ace of spaces, 2 of hearts, 3 of clubs, respectively).
+            Combining the relative pip positioning data and the overall counts of those pips, we can generate a second
+            (and possibly third) guess about the card's rank and suit in addition to simply identifying it by the
+            character and shape in the upper left corner. These secondary and tertiary guesses can then be merged with
+            the primary guess (albeit with lower priority due to reduced accuracy guarantees) to generate a "validated"
+            card identity instead.
+            <br>
+
+            <br><b>Continued Software Implementation/Prototyping</b><br>
+            Finally, I continued prototyping implementations of the computer vision module. As mentioned above, I
+            introduced some changes in the computer vision software. This week, I continued implementation by developing
+            the bounding box identification logic and preliminary pip-counting. The results of the bounding box
+            detection are shown below.
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk4/bbox-in.png"
+                     alt="Array of 52 cards from standard deck (bbox algorithm input)" width="850"/>
+                <br>
+                <img src="Team/progress/img/utk/wk4/bbox-out.png"
+                     alt="Array of 52 cards from standard deck (bbox algorithm output)" width="850"/>
+            </center>
+            <br>
+            At this point, I have completed most of the code for computer vision that can be tested independently of
+            image data generated by our final hardware designs. As the result, final model completion and verification
+            will now be put off until we have completed a full hardware prototype that can be used to scan cards and
+            generate usable data. Other than that, I mostly have to wrap up some elements of de-noising and brute force
+            matching that are still pending, at which point the computer vision module will be ready for end-to-end
+            testing.
+            <br>
+
+            <br>
+
+            <h4><a id="week-3">Week 3:</a> <small><small>(<a
+                    href="Team/progress/progress3.html#week-3">link</a>)</small></small></h4>
+            <b>Date:</b> January 27, 2023<br>
+            <b>Total hours:</b> 11 hours<br>
+            <b>Description of project design efforts:</b><br>
+            This week, we worked on furthering the specifications for our project and starting the prototyping for our
+            designs. I specifically worked on various parts of our functional specification, finalizing our software
+            from a logical and architectural standpoint, and prototyping various parts of our computer vision pipeline.
+            <br>
+
+            <br><b>(A2) Functional Specification Document</b><br>
+            For the functional specification document, I worked on outlining multiple theories of operation for our
+            project designs. I then further refined the logical theories that apply to the software portions of our
+            project, which eventually became the latter two theories in our final specification document.
+            <br>
+            I also worked on specifying the computational constraints of our project's potential solutions, taking
+            consideration of both hardware-based limitations and various open-sourced packages and libraries that can be
+            used to simplify development efforts. I also took note of potential algorithms we could repurpose or take
+            inspiration from in developing our own computer vision card detection solutions.
+            <br>
+
+            <br><b>(A3) Software Overview Document</b><br>
+            I also began work on the software overview documentation for our design. I finalized the state-flow logic
+            for our microcontroller and the overall program architecture for our computer vision and card sorting
+            solutions. I also made a preliminary determination of data structures that will be required in our software.
+            I also drew a preliminary FSM diagram of the microcontroller program flow, depicted below.
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk3/a3_fsm.jpg" alt="Micro FSM Diagram" width="500"/>
+            </center>
+            <br>
+            As a part of this determination process, Zach, Brian, and I spent some time finalizing implementation
+            details, including micro-RasPi communication details and RasPi camera configurations. For the former, we
+            decided on single byte packets, where the micro can send the RasPi control signals including "take image" or
+            "resend position" while the RasPi can encode any of 52 cards/positions to direct the micro's control of
+            various motors. For the latter, Brian and I decided to use the <a href="https://en.wikipedia.org/wiki/YUV">YUV
+            color model</a> for capturing and processing images. This is because the Y-channel directly provides
+            grayscale images and the V-channel provides the image's "redness", which we can use for contour mapping and
+            color filtering, respectively.
+            <br>
+
+            <br><b>Initial Software Implementation/Prototyping</b><br>
+            Finally, a significant amount of my time this week went into finalizing the specific algorithms we will use
+            for our computer vision module, as well as in beginning prototyping of those various processing techniques.
+            Specifically, I decided to go with a consensus model between three different methods of image matching, to
+            ensure high accuracy even in potential edge cases for any one approach. The three approaches are (1) brute
+            force matching (2) keypoint matching from <a
+                href="https://en.wikipedia.org/wiki/Scale-invariant_feature_transform">SIFT</a> and (3) contour mapping
+            from <a href="https://en.wikipedia.org/wiki/Optical_character_recognition">OCR</a>.
+            <ol>
+                <li>
+                    Brute force matching, as the name implies, simply measures the closeness of two images by taking an
+                    element-wise "difference" and summing to evaluate image distance. In essence, this approach is
+                    analogous to computing the <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein
+                    distance</a> of two strings. To increase accuracy, and considering that the cards are in essence
+                    just color on a white background, we can pre-process the card to maximize contrast with a simple
+                    thresholding filter, thus converting color-space complexity to a simple element-wise binary matching
+                    problem.
+                </li>
+                <li>
+                    Next is the keypoint matching algorithm, derived from the same concept in SIFT. Effectively, this
+                    algorithm is an implementation of SIFT that is able to ignore illumination, rotation, and scale
+                    invariance as all images will be taken under the same lighting and positioning conditions. As a
+                    result, the algorithm can easily identify key-points as inflection points in contours and color
+                    changes, and matching is simplified as the images are all taken under similar conditions. So far, I
+                    have finished prototyping the keypoint selection process, but have yet to complete the rest of the
+                    matching process.
+                </li>
+                <li>
+                    Finally, the contour mapping algorithm works by extracting contours (i.e. edges) from the target
+                    image and creating a general impression of the "shape" of the elements (namely the rank and suit of
+                    the card). These attributes are then compared to "ground truth" traces extracted from a collection
+                    of predetermined and known ranks and suits, with the closest match becoming our final identification
+                    of the scanned card. So far, I have completed the edge detection algorithm and am in the process of
+                    using that data to develop an element bounding-box determination algorithm that will be used to
+                    extract and identify the card's rank and suit.
+                </li>
+            </ol>
+            I have not yet had a chance to evaluate these algorithm prototypes on card images, as that requires assembly
+            of some parts of our final design. However, I have been able to test certain aspects of these modules
+            preliminarily on other images, such as the following test of the edge detection code.
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk3/edges.png" alt="Edge detection on a public-use art image"
+                     width="640"/>
+            </center>
+            <br>
+            Additionally, the algorithm performs far better when run on images with inherent contrast, as it lessens
+            the impact of noise (such as from compression or chaotic backgrounds). When run on stock images of playing
+            cards (found online), the result is far more impressive.
+            <br>
+            <center>
+                <img src="Team/progress/img/utk/wk3/edges2-in.jpeg"
+                     alt="Input to edge detect (4 cards -- all aces -- in a row)" width="630"/>
+                <br>
+                <img src="Team/progress/img/utk/wk3/edges2-out.png"
+                     alt="Edge detection output (4 cards -- all aces -- in a row)" width="630"/>
+            </center>
+            <br>
+
+            <br>
+
+            <h4><a id="week-2">Weeks 1-2:</a> <small><small>(<a
+                    href="Team/progress/progress3.html#week-2">link</a>)</small></small></h4>
+            <b>Date:</b> January 20, 2023<br>
+            <b>Total hours:</b> 11 hours<br>
+            <b>Description of project design efforts:</b><br>
+            These first two weeks of the semester were mostly spent on getting started with the project, primarily vis a
+            vis initial planning and project management setup. I mostly contributed in the ideation phase for the
+            non-micro software of the project, along with written contributions to the team-shared project
+            documentation.
+            <br>
+
+            <br><b>(A1) Final Project Proposal</b><br>
+            For the final project proposal, I completed my personal roles and responsibilities section, as well as part
+            of the estimated budget breakdown for our project.
+            <br>
+
+            <br><b>Project Ideation</b><br>
+            For the project planning, I contributed primarily to the computer-vision related software for the project,
+            although I also offered design solutions to other hardware and micro-related software architectural issues
+            we encountered while planning our project design and implementation roadmap.
+            <br>
+            For instance, with respect to the computer vision for card identification, I reformulated the image
+            recognition logic that Brian had previously sketched out.
+            Instead of utilizing contour analysis for the card number and suit recognition, I proposed the potential
+            applicability of more standard image matching algorithms such as <a
+                href="https://en.wikipedia.org/wiki/Scale-invariant_feature_transform">SIFT</a> or of image element
+            capture and recognition algorithms like <a
+                href="https://en.wikipedia.org/wiki/Optical_character_recognition">OCR</a>.
+            <br>
+            Additionally, I proposed restructuring the RasPi-micro communication acknowledgement system to better handle
+            and streamline the processing (i.e. scanning and sorting) of a deck of cards. The specific differences are
+            highlighted in the image below.
+            <div><br><small>Insert old/new communication design comparison image.</small></div>
+            <br>
+            Furthermore, I proposed hardware-related design ideas, including the inclusion of a 52-slot rotating disk in
+            which to hold and sort the deck. I also suggested the inclusion of a spring-powered card dispensing magazine
+            for reliable single-card extraction, for card identification and sorting purposes. The modeling and
+            acquisition of the respective hardware for these concepts were passed on to Zach and Brian, respectively.
+            <br>
+
+            <br><b>Computer Vision Card Recognition Implementation</b><br>
+            Finally, I began implementation on the computer vision/card identification software module for the project.
+            This module involves automating the image capture of the card using the RasPi camera, identifying the card
+            in the image, and passing the fully scanned deck's results to the sort determining algorithm.
+            <br>
+            So far, I have completed the image capture logic, including narrowing down the appropriate camera libraries
+            to use. I also began outlining the code necessary for the computer vision, but have not yet finalized an
+            implementation due to some light uncertainty over the desired algorithmic approach. I plan to develop POCs
+            for all currently planned approaches, so that we cann evaluate which methods provide the highest accuracy
+            while fulfilling the necessary PSSC/design complexity requirements.
+            <br>
+            The CV card recognition module is implemented entirely in Python, and we are using various open-sourced
+            libraries, including the official PiCamera and OpenCV libraries, to provide fundamental image capture and
+            processing APIs from which we can erect the overall card recognition system.
+            <br>
+        </div>
+
+        <!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
+        <div id="footer"></div>
+    </div>
+</div>
+
+<!--JS-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.1.1.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#header").load("header.html");
+        $("#menu").load("navbar.html");
+        $("#footer").load("footer.html");
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,538 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+This is an example weekly progress report document that team members can use to report their individual progress 
+of their ECE477 senior design projects. Weekly progress reports are expected to follow the general guidelines
+presented in the "Progress Report Policy" document, posted on Brightspace.  
+
+Please create 4 copies of this example, renaming each copy to <PurdueID>.html, where <PurdueID> corresponds to
+the Purdue ITAP Career Account ID given by Purdue to each individual team member. If you have any questions,
+contact course staff.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!--Reconfigurable base tag; used to modify the site root location for root-relative links-->
+<!--<base href="https://engineering.purdue.edu/ece477/StudentWebTemplate/" />-->
+    <base href="https://engineering.purdue.edu/477grp3/" /> <!-- Replace the N with your team number-->
+
+<!--Content-->
+<title>ECE477 Course Documents</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="author" content="George Hadley">
+<meta name = "format-detection" content = "telephone=no" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<!--CSS-->
+<link rel="stylesheet" href="css/default.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/content.css">
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<style>
+    .fig {
+        max-height:50%;
+        max-width:50%;
+    }
+
+    .new-fig {
+        max-height:100%;
+        max-width:100%;
+    }
+
+    .fig-wrap {
+        margin: auto;
+        width: 50%;
+        border: 3px solid black;
+        padding: 10px;
+        justify-content: center;
+    }
+</style>
+
+</head>
+<body>
+<div id="wrapper_site">
+    <div id="wrapper_page">
+	<!-- Instantiate global site header.-->
+	<div id="header"></div>
+		<!-- Instantiate site global navigation bar.-->
+		<div id="menu"></div>
+	
+		<!-- Instantiate a page banner image. Page banner images should be 1100x350px and should be located within the local
+			img folder located at this directory level. -->
+		<div id="banner">
+			<img src="Files/img/BannerImgExample.jpg"></img>
+		</div>
+	
+		<!-- Instantiate "tools" needed for a page. Tools are premade functional blocks that can be used to build a page,
+			and include things such as a file lister (for listing out homework assignments or tutorials)
+		-->
+		<div id="content">
+            <h2>Progress Report for Brian Lee</h2>
+
+            <h4>Week 14:</h4>
+            <b>Date:</b> 04/23/2023<br>
+            <b>Total hours:</b> 50<br>
+            <b>Description of project design efforts:</b><br>
+            Week 14 was the week of the final demo, so all tasks involved preparing to get the device demo-ready.<br><br>
+
+            <b>Card Wheel Secure</b><br>
+            We had freed the card wheels from the axle before in order to diagnose the tight spinning, so this week, I readhered these components.<br>
+
+            <b>Guardrail</b><br>
+            We had previously found that it is incredibly difficult to perfectly align the card hopper and the mouth of the card wheel while mounting. Instead of relying on free-hand mounting to align these components, I designed a new card hopper that included "guardrails" to show when they were aligned.<br>
+
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_guardrails.png">
+                As shown in the above figure, the new card hopper includes guardrails that provide the exact spacing to the card wheel, the side of the wall, and the DC motors.
+            </div>
+
+            We got this part printed, but because of support material, much of it was unusable because of how rough the surface was. I sanded down all the surfaces that had to be smooth, then Zach got it mounted. Testing showed that this new hopper worked.<br>
+
+            <b>Pi</b><br>
+            In the time that some mechanical components were being printed, I worked on some of the Pi code, including integrating previously written functionality into our core bootup program and drafting the general structure of our main Pi loop. I also configured the Pi's firewall settings so that Utkarsh's web server code could be accessed.<br>
+
+            <b>Stepper Friction</b><br>
+            The stepper motor under the card hopper, upon testing, was providing too much friction. In fact, when a card was pulled out, it was actually holding it in place when the DC motors tried to grip it away. I modified the stepper wheel to instead only provide friction against the card at one point, so that it would grab, and then importantly, <i>release</i> the bottom card.<br>
+
+            <b>Triangle Tab</b><br>
+            The card hopper's tolerance was higher than the tolerance of the card wheel mouth, and so we needed a system to reduce the side-to-side wiggle of cards in the hopper. I designed a tab to insert in CAD, but it did not get printed in time. To replace this, I cut pieces of cardboard very precisely, glued one layer to another, and then measured the distance with calipers. I repeated this process until we had the right width, then we tested this cardboard tab. The spacing was then perfect, and we attached the tab to the hopper.<br>
+
+            <b>Axle Center</b><br>
+            The cards were actually entering the card wheel too much, resulting in them getting pinched when they should have dispensed. Dan realized that this could be amended by rolling tape around the axle to stop the cards slightly before they fully entered, and I helped him in implementing this solution.<br>
+
+            <b>Motor Driver Resistors</b><br>
+            In search of more torque for our motor drivers, we once again re-selected our resistors. We performed these calculations, I selected matching and available resistors, and Dan kindly soldered them onto our PCB. This resulted in far more torque.<br>
+
+            <b>Camera LED</b><br>
+            I procured an LED for the inside of the box, selected appropriate resistors, and tested the brightness level. It was sufficient, and so I provided the components to Dan, who soldered them onto one board that we could place in the box.<br>
+
+            <b>Minor Fixes</b><br>
+            Many minor things had to be tweaked or adjusted, and the whole team participated in these processes. However, these minute details are too numerous to remember them all.<br>
+
+            <b>// TODO</b> (Things I plan on accomplishing after midnight on Friday)
+            <ul>
+                <li>Final presentation</li>
+            </ul>
+
+            <h1 style="text-align:center;">• • •</h1>
+
+            <h4>Week 13:</h4>
+            <b>Date:</b> 04/14/2023<br>
+            <b>Total hours:</b> 28<br>
+            <b>Description of project design efforts:</b><br>
+            Week 13's primary focus has been on ensuring that our team could fulfill our preliminary PSSC check-offs. This involved a mix of coding, mechanical fixes, and CAD work.<br><br>
+
+            <b>Fastener Hunt</b><br>
+            The DC motor faces were designed to use M2.5 screws, which were not available in the lab, the EE shop, or the machine shop. Therefore, Zach and I had to go to various hardware stores until we could find the right size screws in anticipation of mounting our DC motors.<br>
+
+            <b>DC Motor Mount Assembly</b><br>
+            The pieces for the DC motor mount completed printing this week, and so we assembled the dual-motor mount with the motors inside to check if it was a good fit. Thankfully, the motors were seated very securely and properly spaced apart, and no further redesign was necessary on this front.<br>
+
+            <b>DC Motor Roller Coupler</b><br>
+            Our design requires that two 3/4" rollers be attached to our DC motors in order to propel a dispensed card through the device. This required a coupling mechanism between the motors themselves and the wooden dowels we had acquired to be rollers. The following design was developed:
+
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_initial_roller_couple.png">
+                As seen, the initial design has a slot for the roller to enter, screw holes to secure the wooden dowel, and a mounting port for the motor. The spacing of the motors had to be considered because if the mounting mechanism was too large, the mechanisms on each motor would prevent each other from spinning. 
+            </div>
+
+            This design worked in terms of being properly spaced, secured to the motor, and providing a connection point for the dowel. However, the wooden dowels were not straight enough, which caused a wobbling effect when both motors were spun. Therefore, a replacement roller was necessary.<br>
+
+            <b>New Roller</b><br>
+            In order to prevent the issue of the roller pivoting between the coupler and the actual roller, it was decided that a single piece should be designed that would connect to the motor while also fulfilling the role previously filled by the wooden dowel.<br>
+
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_new_roller.png">
+                This new roller can directly connect to the motor instead of having an intermediary coupler.
+            </div>
+
+            <div class="fig-wrap">
+                <video class="new-fig" controls>
+                    <source src="Team/progress/img/blee/blee_roller_function.mov" type="video/mp4">
+                </video>
+                The rollers, in conjunction with the motors, motor mount, o-rings, and the roller shelf (more details below) provide a fairly accurate result when "shooting" a card. It is demonstrated here vertically, but similar accuracy was observed when operated horizontally.
+            </div>
+
+            <b>Roller Shelf</b><br>
+            We observed that the rollers would sag on the non-mounted side. Therefore, a mechanism that could hold up the motors while also introducing minimal resistance was required.<br>
+
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_card_shelf.png">
+                This card shelf provided support to the rollers and, when properly lubricated, did not significantly hinder the roller speed.
+            </div>
+
+            This design physically fit the case and the rollers. However, we found that it was unrealistic to expect that we could precisely mount it exactly opposite the DC motors. Therefore, this part is not expected to be used moving forward.<br>
+
+            <b>UART Communication Description</b><br>
+            While a general idea of our UART communication packets has existed within the team for some time now, a formal definition of the packet format was required to ensure that we could all contribute to implementation without causing contradictions or introducing inconsistencies. I began this document in discussion with Utkarsh and Zach, and Utkarsh went on to add much more detail and finish the document.<br>
+
+            <b>The Mystery of the Tight Axle</b><br>
+            When we connected the stepper motor to the card wheel, with both mounted in the case, and tried to perform our precise rotation, we found that the motor was not able to provide enough torque to spin the wheel. This was a significant issue as the rotation of the card wheel is an integral part of our device's functionality. We narrowed the cause down to two factors to investigate: the stepper motor was outputting much less torque than anticipated and the card wheel felt much more difficult to spin than it had before. While the other members of the team investigated the stepper motor's decreased torque output (see the other progress reports for more details), I endeavored to the solve The Mystery of the Tight Axle.<br>
+            The first fix I attempted was lubricating the interface point between the bearings and the axle. However, no matter how much I applied, the wheel still remained incredibly tight. At this point, my suspicion was that the lubrication we had previously applied caused a buildup of dirt, dust, and grime. Therefore, I decided to disassemble the entire card wheel mechanism and cleaned the bearings and the axle with Ballistol, a CLP designed to remove fouling from metal objects like firearms and knives. Then, I reassembled the entire mechanism and relubricated the bearings. Still, the tightness remained.<br>
+            After some time, a realization was made: earlier in the week, an instant adhesive had been applied to the card wheels in order to secure them in their position on the axle. However, during this process, I suspect that the adhesive had not fully dried before the axle was removed and then reinserted through the mechanis. This, or some other action, smeared instant adhsive on the axle and the bearings, which then dried and introduced an immense amount of friction.<br>
+            In order to remedy this, we procured a bottle of acetone and soaked the bearings in it to remove the dried adhesive. While they were soaking, I also sanded the entire axle to remove the dried adhesive as well as smooth the surface of the metal. After this entire process, I reassembled the card wheel mechanism yet again, and this time, it spun incredibly smoothly. This, in conjunction with the solving of the Mystery of the Missing Stepper Motor Torque, allowed us to spin our card wheel with our stepper motor incredibly precisely.<br>
+
+            <b>UART on Final Hardware</b><br>
+            In order to fulfill one of our Preliminary PSSCs, we had to demonstrate the communication between the SBC and the MCU via UART.<br>
+            <sub>(Side note: During this process, I noticed that our Raspberry Pi power was spotty because of a poorly soldered ground connection on the jack on the PCB. Utkarsh graciously resoldered this component, and hopefully the connection will be secure moving forward.)</sub><br>
+            With help from Utkarsh and Zach, I was able to connect the Raspberry Pi to our PCB, add an interrupt handler for UART communication on the STM32, and perform some various debugging. In the end, we were able to fulfill this Preliminary PSSC.<br>
+
+            <b>// TODO</b> (Things I plan on accomplishing after midnight on Friday)
+            <ul>
+                <li>Finish everything!</li>
+            </ul>
+
+            <h1 style="text-align:center;">• • •</h1>
+
+            <h4>Week 12:</h4>
+            <b>Date:</b> 04/08/2023<br>
+            <b>Total hours:</b> 10<br>
+            <b>Description of project design efforts:</b><br>
+            This week has yet again been focused on physical construction.<br><br>
+
+            <b>New Card Hopper Testing</b><br>
+            The new card hopper design was retrieved from EE Advanced Manufacturing, and upon initial testing, it works much better than the old hopper design. As such, this is the design that will be used moving forward as we continue to integrate our project functions.<br>
+
+            <b>Pi Power Cable</b><br>
+            Last week, we ordered a cable to carry the 5V from the PCB to our Raspberry Pi. However, once we tested this cable, we found that it provided an incredibly inconsistent connection. As such, I procured a Micro-B plug to USB-A receptacle cable and a Micro-B plug to USB-A plug cable. These two cables, when used in conjunction, were able to provide sufficient and consistent power to our SBC, and we will continue to use this setup until a proper replacement is secured.<br>
+            
+            <b>Stepper Motor to Axle Coupling</b><br>
+            We need a mechanism to couple the axle of the card wheel to the stepper motor. I developed the following design:<br>
+
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_axle_hub.png">
+                This mounting hub is designed to fit our 0.25 inch axle and match the stepper motor's mounting hub.
+            </div>
+
+            <b>DC Motor Housing and Mount</b><br>
+            A mechanism was also needed to house, mount, and space the DC motors, which I also developed:<br>
+
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_dc_mount.png">
+                This housing is designed such that the DC motor rollers, including the dowel and O-rings, will be properly spaced once both motors are placed inside. This design also provides the mounting interface to connect the motors to the case of the device.
+            </div>
+
+            <b>A11 Ethical and Environmental Analysis</b><br>
+            Report A11 was also partially written this week prior to midnight on Friday.<br>
+
+            <b>// TODO</b> (Things I plan on accomplishing after midnight on Friday)
+            <ul>
+                <li>Finish A11.</li>
+                <li>Final construction.</li>
+            </ul>
+
+            <h1 style="text-align:center;">• • •</h1>
+
+            <h4>Week 11:</h4>
+            <b>Date:</b> 3/31/2023<br>
+            <b>Total hours:</b> 7<br>
+            <b>Description of project design efforts:</b><br>
+            This week was a largely unproductive week for me because I had to spend a lot of time on outside-of-class obligations. My focus has been on completion of physical assisting Zach, who has been leading the charge on this final sprint for package design completion.<br><br>
+
+            <b>Part Procurement</b><br>
+            Some parts, which are necessary for the function of our device, had not yet been procured. I submitted a purchase request for rubber o-rings (for our DC motor-controlled rollers) and a USB Micro B Male-to-Male connector (for delivering the 5V needed for the Raspberry Pi from the PCB). I also obtained a metal rod for the card wheel housing, as the wooden dowel we had used before would twist too much when torque was only applied on one side, which would cause the card wheels to become unaligned.<br>
+
+            <b>Hopper Redesign</b><br>
+            Our initial design of the card hopper would result in several cards being pulled at once. This is not good, as the consistent dispensing of a single card is one of our PSSCs. This was determined to be caused by 3 major issues: the large surface area between each card, the weight of all cards being on the bottom card, and the large dispensing slot. A new design would have to address all of these issues, as seen below:<br>
+            
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_canted_hopper.png">
+                The new card hopper features a canted stacking path, which will hopefully reduce the amount of weight on the front-side of the bottom-most card, as well as slightly reduce the aligned surface-areas of the entire deck. The slot has also been reduced in size to lower the probability of a multi-card dispense.
+            </div>
+
+            <b>// TODO</b> (Things I plan on accomplishing after midnight on Friday)
+            <ul>
+                <li>Mechanical construction.</li>
+                <li>Final embedded software.</li>
+            </ul>
+
+            <h1 style="text-align:center;">• • •</h1>
+
+            <h4>Week 10 and Spring Break:</h4>
+            <b>Date:</b> 3/24/2023<br>
+            <b>Total hours:</b> 20<br>
+            <b>Description of project design efforts:</b><br>
+            The majority of my efforts during Spring Break and Week 10 were related to resdesigning our PCB and ensuring that it would be ordered and delivered in time for our project timeline to remain intact.<br><br>
+
+            <b>PCB Design</b><br>
+            At the start of Spring Break, as the available team members, Zach and I attempted to resolve any remaining issues with our PCB so that we could get it ordered. However, the more issues we fixed, the more we discovered, and the more things we tried to fix, the more cascading issues resulted. As such, we decided to keep the schematic (with some fixes and changes) but restart the PCB. This task demanded a herculean effort, but was ultimately completed, and our PCBs were received in Week 10, on schedule.<br>
+
+            <b>Packaging Design</b><br>
+            Packaging design progress this week was mostly thanks to Zach, although I have began the process of redesigning certain components for our final package construction.<br>
+
+            <b>// TODO</b> (Things I plan on accomplishing after midnight on Friday)
+            <ul>
+                <li>Mechanical construction.</li>
+            </ul>
+
+            <h1 style="text-align:center;">• • •</h1>
+
+            <h4>Week 8 and Week 9:</h4>
+            <b>Date:</b> 3/10/2023<br>
+            <b>Total hours:</b> 13<br>
+            <b>Description of project design efforts:</b><br>
+            Week 8's efforts were in preparation for the design review, particularly refining the packaging design, and Week 9's efforts involved some final prototyping to ensure that all parts could integrate with the PCB once it is ordered.<br><br>
+
+            <b>Packaging Design</b><br>
+            The packaging design was updated to include: positioning of mechanical components like the motors, card wheel, card hopper, and card receiver; location of electrical components like the PCB, RPi, RPi Camera, LCD screen, and push puttons; and a higher detail and material specific outer packaging.<br>
+
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_outer_package_model.png">
+                Updated outer package model.
+            </div>
+
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_mechanical_model.png">
+                Updated mechanical model.
+            </div>
+
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_electrical_layout.png">
+                Updated electrical component layout model.
+            </div>
+
+            <b>Break sensor</b><br>
+            During our design review, it was noted that we had not planned for the mechanism by which we would detect "home" position for the card wheel. Because we had already procured a break sensor for this purpose, I decidd to quickly prototype this functionality before we ordered our PCB such that it could be included in our design. In addition to prototyping it with an LED indicator, I also successfully implemented it with a pulled up GPIO pin on the STM32.<br>
+
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_break.png">
+                LED indicator showing break detector functionality (active low).
+            </div>
+
+            <b>Pi Boot Up</b><br>
+            Because our SBC needs to automatically execute the software necessary once it receives power, I configured the Pi to automatically run a Python program during its boot sequence, which will allow us to have the Pi perform its duties upon device power up.<br>
+
+            <b>BJT Motor Control</b><br>
+            While our initial DC motor control prototyping involved the use of an N-channel MOSFET, our final design uses an NPN BJT. In collaboration with Zach, we identified a BJT that fit our purpose (based on collector current, emitter-base voltage, and collector-emitter voltage). This prototyping was successful, and was thus reflected in our final PCB wiring.<br>
+
+            <b>Card Wheel Test</b><br>
+            With the card wheel housing, the card wheel, the bearings, the spacing between all these components, etc. finalized, it was time to test whether the mechanical design in fact worked. After constructing this segment of the device, we were excited to find that the wheel could rotate freely in the housing, a card could be inserted and rotated without jamming, and the card would, as designed, skip over the ejection gap when rotated one way and be ejected when rotated the other.<br>
+
+            <div class="fig-wrap">
+                <video class="new-fig" controls>
+                    <source src="Team/progress/img/blee/blee_wheel_demo.mov" type="video/mp4">
+                </video>
+                Demonstration of card insertion, rotation, and directionally-controlled ejection.
+            </div>
+
+            <b>// TODO</b> (Things I plan on accomplishing after midnight on Friday)
+            <ul>
+                <li>Mechanical construction.</li>
+                <li>PCB verification.</li>
+            </ul>
+
+            <h1 style="text-align:center;">• • •</h1>
+
+            <h4>Week 7:</h4>
+            <b>Date:</b> 2/24/2023<br>
+            <b>Total hours:</b> 12<br>
+            <b>Description of project design efforts:</b><br>
+            My efforts this week, in anticipation of next week's design review, have been focused on ensuring that all core functionality is proven as possible.<br><br>
+
+            <b>Part Procurement</b><br>
+            I submitted the procurement for the bearings needed for the card housing. Also, the entire team had a discussion in ManLab this week led by Zach as to what other components are necessary for final prototyping, such as power components for each functionality. Lastly, I made a hardware store trip with Zach to obtain components necessary to prototype the card rotation mechanism, such as additional fasteners, dowels, and spacers.<br>
+
+            <b>Card Wheel Housing</b><br>
+            I submitted the Card Wheel Housing for printing, and we were able to test fit the parts together. The two housing halves seem to fit really well, as do the wheel fins with the housing, and the bearings onto the housing.<br>
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_housing_print.png">
+                Card wheel housing halves fitted together, with bearings tentatively fastened too.
+            </div>
+
+            <b>Pi Cam Integration</b><br>
+            Utkarsh has continued to work on the card identification code, which will be integral to our final device operation. This week, I worked on ensuring that the card identification program could run on the Pi (ie by installing compatible versions of all used libraries). Then, I tested its ability to integrate with the picture capturing code. The two are now confirmed to be able to run in tandem without error, though some troubleshooting is required with regard to the quality of the output.<br>
+
+            <b>Serial Communication</b><br>
+            With the midsemester design review approaching, it was necessary to perform some final sanity checks on everything that interfaces with the PCB. This included the UART line between the Pi and the STM32. Because UART prototyping had been done with the ESP32 stand-in before, I re-implemented it with the STM32 to ensure that everything was working.
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_uart_stm.png">
+                STM to Pi (and middle-man observer) UART communication.
+            </div>
+
+            <b>// TODO</b> (Things I plan on accomplishing after midnight on Friday)
+            <ul>
+                <li>Limit test UART line.</li>
+                <li>Continue hardware prototyping.</li>
+                <li>Troubleshoot camera-ID integration quality.</li>
+                <li>Prepare for design review presentation.</li>
+            </ul>
+
+            <h1 style="text-align:center;">• • •</h1>
+
+            <h4>Week 6:</h4>
+            <b>Description of project design efforts:</b><br>
+            I was severely ill during week 6, and so no major design tasks were completed.<br><br>
+
+            <h1 style="text-align:center;">• • •</h1>
+
+            <h4>Week 5:</h4>
+            <b>Date:</b> 2/10/2023<br>
+            <b>Total hours:</b> 14<br>
+            <b>Description of project design efforts:</b><br>
+            My efforts this week have essentially been entirely on the mechanical overview and additional mechanical design.<br><br>
+
+            <b>A5 Component Analysis</b><br>
+            I completed the component analysis for the single-board computer.<br>
+
+            <b>Card Wheel Housing</b><br>
+            The card wheel will need a fairly precisely made housing such that the cards can move inside freely, be inserted without issue, and exit the wheel in a predictable and consistent fashion. I designed a preliminary version of the wheel housing.<br>
+
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_wheel_housing.jpg">
+                Cutout of wheel housing with card wheel.
+            </div>
+
+            <b>Card Receiver</b><br>
+            Once the cards exit the wheel, they need to self-arrange into the form of a deck. I made a preliminary design for this card "catching" mechanism that will receive the cards once they exit the wheel.<br>
+
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_initial_receiver.jpg">
+                Initial card receiver design.
+            </div>
+
+            <b>Total Device Housing</b><br>
+            I also worked on making a rough draft of how our components would align so that we could have an estimate of our total package size.<br>
+
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_initial_total.jpg">
+                Initial total package model.
+            </div>
+
+            <b>// TODO</b> (Things I plan on accomplishing after midnight on Friday)
+            <ul>
+                <li>Finish mechanical overview</li>
+                <li>Print and test wheel housing</li>
+                <li>Test integration of camera functionality with image functionality</li>
+            </ul>
+
+            <h1 style="text-align:center;">• • •</h1>
+
+            <h4>Week 4:</h4>
+            <b>Date:</b> 2/3/2023<br>
+            <b>Total hours:</b> 9<br>
+            <b>Description of project design efforts:</b><br>
+            My efforts this week continued to be mostly on the single-board computer side of the project, though at the end of the week, I began to pivot to supporting mechanical design efforts.</br><br>
+
+            <b>Card Extraction Simulator</b><br>
+            I began working on simulation utilities built upon the fixture file and card shuffling utilities made by Zach. This includes being able to simulate a freshly inserted deck of cards, separating top cards, etc. The thought process behind this is that we can now test individual parts of our project before complete integration. For example, before the physical structure is actually constructed, we should still be able to test the Pi's ability to communicate during the capture picture, identify card, and remove card pipeline, and such simulation utilites will make that possible. During this process, I also identified some bugs which need to be addressed with our fixture file generation and card order determination code.<br>
+
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_sim_utils.jpg">
+                Picture of some of the implemented CardSimulator methods.
+            </div>
+
+            <b>Pi Camera</b><br>
+            I also continued to work on the Pi Camera capture functionality. In discussion with Utkarsh, we identified some general requirements (i.e. the format of the picture that is returned, which we have currently decided to be a YUV numpy array), and I have since been experimenting with different techniques to accomplish this. For example, it may be faster to capture a picture from the video stream, but this will cause a decrease in picture quality. Further testing is required to determine what the optimal parameters are.<br>
+
+            <b>CAD</b><br>
+            With mechanical components being an unforunately large portion of our project, it was determined that we needed an additional team member working on that front. As such, I have begun learning CAD to better support Zach's mechanical design efforts.<br>
+            
+            <b>PSSCs and Project Description</b><br>
+            I updated the PSSCs and the project description to reflect the feedback given by the instructional team during the last ManLab.<br>
+
+            <b>// TODO</b> (Things I plan on accomplishing after midnight on Friday)
+            <ul>
+                <li>A5 - Component Analysis</li>
+                <li>Ramp up mechanical design efforts</li>
+                <li>Debug card shuffling code</li>
+                <li>Test integration of camera functionality with image functionality</li>
+            </ul>
+
+            <h1 style="text-align:center;">• • •</h1>
+
+            <h4>Week 3:</h4>
+            <b>Date:</b> 1/27/2023<br>
+            <b>Total hours:</b> 10<br>
+            <b>Description of project design efforts:</b><br>
+            This week's efforts primarily came down to narrowing down some big picture design decisions on the front of the serial connection between the SBC and the micro in addition to wrestling with installing everything needed for the SBC with respect to the computer vision portion of the device.</br><br>
+            
+            <b>A2 Functional Description</b><br>
+            After last Friday's progress report, the first thing I worked on was the Function Description team assignment. On this document, I worked on 1.0 Functional Description, parts of 2.0 Theory of Operation, parts of 4.3 Thermal/Power constraints, 4.4 Mechanical Contraints, 4.6 Other Contraints, and Appendix 1 Functional Block Diagram.<br>
+            <b>Serial Communication Design</b><br>
+            Zach and I nailed down the specifics as to what information and the format of that information (on a bit/byte level) would be sent on the serial line between the SBC and the microcontroller. Then, in collaboration with Utkarsh, we discussed the implications of the general software flow on these decisions, and further refined our choices. In the end, it was decided that the microcontroller would send a single byte to signal when a picture was ready to be taken, and then the SBC would send back a single byte acknowledging that a picture had been taken and which slot to put the previous card in (since only 6 bits would be required to represent 52 slots). Then, user preferences could be sent from the microcontroller to the SBC as a string of characters, with the settings described as comma separated values.<br>
+            <b>Pi Camera Setup</b><br>
+            I modified the Raspberry Pi configuration settings to enable camera support and began experimenting with various formats and settings with which to capture images.
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_first_pi_pic.jpg">
+                First successful picture taken with Raspberry Pi camera. Candid face of teammate censored out of respect.
+            </div>
+            Via testing and discussion with Utkarsh, it was decided that the most efficient way to operate the picture taking function was to avoid any writing or reading to disk, as such operations would be incredibly slow and would result in slower operation time. Instead, the picture taking would avoid writing to disk, skip compression steps, and simply return the unadulterated matrix of image data. Furthermore, we decided to initially work with YUV pictures as opposed to RGB, as we hypothesize that it will require less steps to work with during the image recognition step.<br>
+
+            While most dependencies were easily installed, opencv-python in particular has been a pain to get installed on the Pi. In fact, I accidentally bricked the Pi while trying to get it installed, and so I had to completely reset the Pi and repeat all set-up procedures. I have tried, and will continue to try, numerous different methods to successfully install opencv-python as it is essnetial to have based on our current understanding of how we will be performing card recognition.<br>
+            <b>Pi Web Server</b><br>
+            When working on the Pi, we are currently SSH'ing in, as that is far more convenient than having to plug peripherals into the Pi and work on it that way. However, the limitation of SSH is that we cannot get immediate visual feedback with images. While something like a VNC server would allow us to pass in keyboard and mouse input remotely and get graphical screen data passed out, such set up did not seem worth it. Instead, I simply set up a local web server on the Pi such that we can simply employ SSH tunneling and access files on the Pi via our own browsers.
+            <div class="fig-wrap">
+                <img class="new-fig" src="Team/progress/img/blee/blee_web_server.jpg">
+                Example of our ability to access files (including pictures) on the Pi via the web server. This capability allows us to view images on the Pi without having to plug in peripherals like a monitor, or even physically have access to the Pi.
+            </div> 
+            <b>// TODO</b> (Things I plan on accomplishing after midnight on Friday)
+            <ul>
+                <li>Continue to work on getting <b>all</b> modules needed installed on the Pi.</li>
+                <li>Simulate the exact packet exchanges we intend to have so that any bugs, limitations, or design flaws can be identified.</li>
+                <li>Work on integrating picture taking functionality with inter-device acknowledgements.</li>
+            </ul>
+
+            <h1 style="text-align:center;">• • •</h1>
+
+            <h4>Weeks 1-2:</h4>
+            <b>Date:</b>1/20/2023<br>
+            <b>Total hours:</b> 12<br>
+            <b>Description of project design efforts:</b><br>
+            During Week 1, most of our team's work, including my own, was in the context of housekeeping. However, I was still able to get some initial design and prototyping efforts going. Most notably, I worked on setting up the Pi to model our single board computer, an ESP32 to model our microcontroller, and designed and set up a system for prototyping the communication between these two devices.</br>
+            <br>
+            <b>Final Project Proposal</b><br>
+            For the Final Project Proposal (A1), I wrote the project description, my personal section of team Roles and Responsibilities, and wrote the PSSCs.<br>
+            <b>Image Recognition Ideation</b><br>
+            I played around with some different technologies and methods that we may use for card identification. After evaluating a number of tools and methods, I sketched out a general procedure that we may use to identify cards with color analysis and contour analysis in OpenCV.<br>
+            <div><img class="fig" src="Team/progress/img/blee/blee_image_rec_ideas.jpeg"></div>
+            After a conversation with a TA, Dr. Walter, and Zach, it was agreed upon that a process similar to this (hard-coded rules and procedures) would be more realistic, more time efficient, and more resource efficient than alternative methods, such as training our own ML model. After a team discussion during ManLab, it was determined that Utkarsh had more experience in this area than I did, so this task was then handed over to him.<br>
+            <b>Raspberry Pi Setup</b><br>
+            In order to prototype the duties of our single-board computer, we needed to have one set up. For this task, I installed the OS for the Pi, and configured it to use a static IP and enabled SSH so that we can work on it remotely and/or without having to constantly swap peripherals between the Pi and our lab station PC.<br>
+            <b>ESP32 Setup</b><br>
+            I borrowed an ESP32 Feather V2 from Zach and reflashed it with MicroPython firmware. (While we obviously cannot use MicroPython in our final design, I chose it for this ESP32 so I can quickly prototype the communication between our microcontroller and our single-board computer).<br>
+            <b>Part Procurement</b><br>
+            I reviewed the procedures for both direct part procurement and retroactive reimbursement to determine which fit better for our team's needs. It was clear and obvious that the instructional team's recommendation of using direct procurement was the better option. I also submitted a procurement request for an off-the-shelf card shoe, which has since arrived. I plan to use it to help prototype inter-device communication during the process of initial card extraction and separation.<br>
+            <b>Microcontroller-SBC Communication</b><br>
+            One of the core parts of our project is the ability for the microcontroller (which is responsible for accepting user inputs and motor control) to communicate with our single-board computer (which is responsbile for taking pictures of cards, identifying rank and suit for each card, and determining an ideal sort order given the user's inputs). One of the core parts of this inter-device communication is the card separation process, during which we need to very precisely coordinate when a card is taken off the pile. The following figure represents an initial idea for how this communication will work.<br>
+            <div><img class="fig" src="Team/progress/img/blee/blee_inter_device_comm_sketch.jpeg"></div>
+            Essentially, it is planned for the SBC to wait for the microcontroller to signal when it should take the first picture. Then, it will create a new thread, fork the process, or call an asynchronous method to process that picture. In the meantime, it will send back and acknowledgement that a picture has been taken. The microcontroller then knows when to move that card off an reveal another card. The micro will then send an acknowledgement back that the card has been moved, which tells the SBC that it can take another picture.<br>
+            After a conversation with Dr. Walter, we decided that this communication should be done via UART. To start, I enabled serial communication on the Pi and tested its UART input and output with a serial-to-USB adapter and TeraTerm on my computer. Once I confirmed that it was working on the Pi, I did the same for the ESP32. Now, it was time to connect the micro and the SBC via UART. However, in order to make our lives easier during prototyping and debugging, I wanted to connect my computer to both devices as a passive observer (i.e. listening to both TX lines on my laptop's RX line, but not connecting my TX to anything). Very quickly, however, I realized that simply connecting the serial-to-USB adapter's RX line to both TX lines would not work, as this would short all 4 lines (Pi's RX, Pi's TX, ESP32's RX, ESP32's TX) together, which is not the desired effect. I overcame this by adding two diodes as seen below.
+            <div><img class="fig" src="Team/progress/img/blee/blee_uart_observer.jpeg"></div>
+            I then wired this together.
+            <div><img class="fig" src="Team/progress/img/blee/blee_uart_observer_wiring.jpeg"></div>
+            As seen below, it works! Our TeraTerm window can see what is being sent out of both devices, while the ESP32 only sees what the Pi sends, and vice versa. More importantly, neither device is receiving what they sent out themselves.
+            <div><img class="fig" src="Team/progress/img/blee/blee_observer_screens.jpg"></div>
+            <b>Updating Project Description</b><br>
+            After receiving feedback from the instructional team during ManLab about our PSSCs and project description, I added more details to our project description such that it was more specific as to what would be accomplished by our device, and how it would be done. I also revised our PSSCs based on the feedback we received.<br>
+            <b>// TODO</b> (Things I plan on accomplishing after midnight on Friday)
+            <ul>
+                <li>Work on A2 Functional Specification</li>
+                <li>In collaboration with the rest of the team, begin prototyping the format of the bytes we're sending between the two devices to efficiently communicate everything we need.</li>
+                <li>Set up camera for Pi and integrate picture taking functionality with inter-device acknowledgements.</li>
+            </ul>
+
+        </div>
+	
+		<!-- Instantiate global footer. Any changes to the footer should be made through the top-level file "footer.html" -->
+		<div id="footer"></div>
+    </div>
+</div>
+
+<!--JS-->
+<script src="js/jquery.js"></script>
+<script src="js/jquery-migrate-1.1.1.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#header").load("header.html");
+	$("#menu").load("navbar.html");
+	$("#footer").load("footer.html");
+});
+</script>
+</body>
+</html>
